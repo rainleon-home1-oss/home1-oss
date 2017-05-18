@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.home1.oss.lib.adminclient.starter.AdminClientAutoConfiguration,\
+cn.home1.oss.lib.adminclient.starter.ConfigServerPostProcessor

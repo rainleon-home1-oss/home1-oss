@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cn.home1</groupId>
+        <artifactId>oss-build</artifactId>
+        <version>1.0.9.OSS</version>
+    </parent>
+
+    <artifactId>oss-lib-log4j2</artifactId>
+    <description>Log4j2 JMX support</description>
+    <name>oss-lib-log4j2</name>
+    <packaging>pom</packaging>
+    <url>https://github.com/home1-oss/oss-lib-log4j2</url>
+    <version>1.0.8.OSS-SNAPSHOT</version>
+
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/home1-oss/oss-lib-log4j2</url>
+    </ciManagement>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/home1-oss/oss-lib-log4j2/issues</url>
+    </issueManagement>
+    <scm>
+        <connection>scm:git:https://github.com/home1-oss/oss-lib-log4j2.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/home1-oss/oss-lib-log4j2.git</developerConnection>
+        <url>https://github.com/home1-oss/oss-lib-log4j2</url>
+    </scm>
+
+    <modules>
+        <module>oss-lib-log4j2-spring-boot-1.4.1.RELEASE</module>
+        <module>oss-lib-log4j2-spring-boot-1.4.2.RELEASE</module>
+    </modules>
+
+    <properties>
+        <oss-common-dependencies.version>1.0.8.OSS</oss-common-dependencies.version>
+    </properties>
+</project>

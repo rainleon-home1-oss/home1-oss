@@ -1,0 +1,95 @@
+# todomvc-thymeleaf-config
+
+#logging.level.: ${LOGGING_LEVEL_:INFO}
+logging:
+  file: ${LOGGING_FILE:oss-todomvc-thymeleaf}.log
+  level.: ${LOGGING_LEVEL_:INFO}
+  level:
+    jndi: ${LOGGING_LEVEL_:INFO}
+
+  path: ${LOGGING_PATH:${user.home}/data/oss-todomvc-thymeleaf/logs}
+
+app:
+  type: TEMPLATE
+  security:
+    permited: ''
+    authEntryPoint: ''
+    authFailureHandler: '/login.html'
+    authSucessHandler: '/index.html'
+    basePath: '/auth'
+
+debug: false
+
+
+security:
+
+  ignored: '/info,/login.html,/css/**,/js/**,/images/**,/webjars/**,/**/favicon.ico'
+  user:
+    name: ${SECURITY_USER_NAME:admin}
+    password: ${SECURITY_USER_PASSWORD:admin_pass}
+    role: ADMIN
+
+server:
+  error:
+    includeStacktrace: ALWAYS   # 记录 trace
+  port: ${SERVER_PORT:8083}
+
+spring.datasource:
+  continue-on-error: false 
+  initialize: false # Populate the database using 'data.sql'.
+  jmx-enabled: false # Enable JMX support (if provided by the underlying pool).
+  maximum-pool-size: 10
+  minimum-idle: 5
+  name: dataSource
+  test-while-idle: true
+  time-between-eviction-runs-millis: 1
+  validation-query: 'SELECT 1'
+  type: 'com.zaxxer.hikari.HikariDataSource'
+  driver-class-name: 'org.h2.Driver'
+  url: 'jdbc:h2:~/data/oss-todomvc-thymeleaf/h2' #'jdbc:h2:mem:mydb'
+  
+---
+spring:
+  profiles: default
+
+---
+spring:
+  profiles: development.env
+
+app:
+  security:
+    enabled: true
+    defaultTestUser: user1
+    loginPage: '/login'
+    authSucessHandler: '/index.html' # 登录成功跳转页面
+
+---
+spring:
+  profiles: ut.env
+
+---
+spring:
+  profiles: it.env
+
+---
+spring:
+  profiles: staging.env
+
+---
+spring:
+  profiles: production.env
+
+spring.datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://local-mysql:3306/oss-todomvc-thymeleaf?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+  username: root
+  password: root
+
+spring.h2.console.enabled: false
+
+spring.jpa:
+  database: MYSQL
+  database-platform: 'org.hibernate.dialect.MySQL5InnoDBDialect'
+  generate-ddl: false
+  hibernate.ddl-auto: none
+  show-sql: false

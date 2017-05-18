@@ -1,0 +1,1719 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>附录 feign和ribbon · home1开源技术栈</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="张浩伦 Haolun Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CONTRIBUTION.html" />
+    
+    
+    <link rel="prev" href="../../oss-archetype/oss-archetype-micro-service-config/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part I</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../oss/README.md">
+            
+                <span>
+            
+                    
+                    oss是什么
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../oss/INTRODUCTION.md">
+            
+                <span>
+            
+                    
+                    技术栈的软件工程pom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../oss/oss-common-dependencies/README.md">
+            
+                <span>
+            
+                    
+                    技术栈依赖管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../oss/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/README.md">
+            
+                <span>
+            
+                    
+                    spring-boot-1.4.x
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../oss/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/oss-common-dependencies-spring-boot-1.4.1.RELEASE/README.md">
+            
+                <span>
+            
+                    
+                    spring-boot-1.4.1.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../../oss/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/oss-common-dependencies-spring-boot-1.4.2.RELEASE/README.md">
+            
+                <span>
+            
+                    
+                    spring-boot-1.4.2.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../oss/CODESTYLE.md">
+            
+                <span>
+            
+                    
+                    oss的代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../oss/GITFLOW.md">
+            
+                <span>
+            
+                    
+                    oss的分支模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../oss/GIT_FORK_TUTORIAL.md">
+            
+                <span>
+            
+                    
+                    git fork开发文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../oss/GITINSPECT.md">
+            
+                <span>
+            
+                    
+                    各个开发者对项目的贡献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../oss/MVNSITE.md">
+            
+                <span>
+            
+                    
+                    如何使用oss为项目构建网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../oss/GITBOOK.md">
+            
+                <span>
+            
+                    
+                    如何生成oss的gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../oss/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../oss/SONARQUBE.md">
+            
+                <span>
+            
+                    
+                    使用sonarqube评估代码质量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../oss/THINGS_SHOULD_KNOW.md">
+            
+                <span>
+            
+                    
+                    oss开发者和用户应该知道的n件事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../oss/REFS.md">
+            
+                <span>
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part II</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../oss-release/">
+            
+                <a href="../../oss-release/">
+            
+                    
+                    oss-release依赖管理平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../oss-release/oss-release-spring-boot-1.3.7.RELEASE/README.md">
+            
+                <span>
+            
+                    
+                    oss-release-spring-boot-1.3.7.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../oss-release/oss-release-spring-boot-1.4.1.RELEASE/">
+            
+                <a href="../../oss-release/oss-release-spring-boot-1.4.1.RELEASE/">
+            
+                    
+                    oss-release-spring-boot-1.4.1.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../oss-release/CONTRIBUTION.html">
+            
+                <a href="../../oss-release/CONTRIBUTION.html">
+            
+                    
+                    如何构建oss-release或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part III</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../oss-lib/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib微服务程序库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../oss-lib/oss-lib-common/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-common
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../oss-lib/oss-lib-swagger/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-swagger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../oss-lib/oss-lib-webmvc/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-webmvc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../oss-lib/oss-lib-errorhandle/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../../oss-lib/oss-lib-errorhandle/INTRODUCTION.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 简单上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../../oss-lib/oss-lib-errorhandle/INTRODUCTION_DETAIL.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 详细介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="../../oss-lib/oss-lib-errorhandle/TARGET.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.4" data-path="../../oss-lib/oss-lib-errorhandle/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 手动测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.5" data-path="../../oss-lib/oss-lib-errorhandle/SPRINGBOOTDOC.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 官方文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../oss-lib/oss-lib-adminclient/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-adminclient
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../../oss-lib/oss-lib-adminclient/ADMIN_CLIENT_CONFIGURATION.md">
+            
+                <span>
+            
+                    
+                    oss-admin客户端配置说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../../oss-lib/oss-lib-security/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../../oss-lib/oss-lib-security/USER_GUIDE_FOR_RESTFUL.md">
+            
+                <span>
+            
+                    
+                    RestFul应用接入lib-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.2" data-path="../../oss-lib/oss-lib-security/USER_GUIDE_FOR_TEMPLATE.md">
+            
+                <span>
+            
+                    
+                    Template应用接入lib-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.3" data-path="../../oss-lib/oss-lib-security/ABOUT_ME.md">
+            
+                <span>
+            
+                    
+                    关于lib-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../../oss-lib/oss-lib-test/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../../oss-lib/oss-lib-log4j2/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-log4j2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part IV</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../ENVIRONMENT.md">
+            
+                <span>
+            
+                    
+                    oss微服务运行时环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../oss-eureka/SERVICE_DISCOVERY.md">
+            
+                <span>
+            
+                    
+                    服务发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../DOCKER_INSTALL.md">
+            
+                <span>
+            
+                    
+                    如何安装docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../DOCKER_COMMANDS_AND_ISSUES.md">
+            
+                <span>
+            
+                    
+                    docker使用常见命令和常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../DOCKER_REGISTRY.md">
+            
+                <span>
+            
+                    
+                    在本地搭建docker的registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../oss-eureka/README.md">
+            
+                <span>
+            
+                    
+                    oss-eureka微服务发现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.5.1" data-path="../../oss-eureka/GRACEFUL_SHUTDOWN.md">
+            
+                <span>
+            
+                    
+                    如何优雅关闭服务/应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.2" data-path="../../oss-eureka/SELF_PRESERVATION.md">
+            
+                <span>
+            
+                    
+                    自我保护模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.3" data-path="../../oss-eureka/PERFORMANCE.md">
+            
+                <span>
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.4" data-path="../../oss-eureka/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss-eureka或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../oss-admin/README.md">
+            
+                <span>
+            
+                    
+                    oss-admin微服务监控管理中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.6.1" data-path="../../oss-admin/INTRODUCTION.md">
+            
+                <span>
+            
+                    
+                    oss-admin功能介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6.2" data-path="../../oss-admin/OSS_ADMIN_SOLUTIONS.md">
+            
+                <span>
+            
+                    
+                    oss-admin开发遇到的问题、解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6.3" data-path="../../oss-admin/OSS_ADMIN_SECURITY.md">
+            
+                <span>
+            
+                    
+                    oss-admin security说明文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6.4" data-path="../../oss-admin/OSS_ADMIN_ABOUT_CONFIG.md">
+            
+                <span>
+            
+                    
+                    oss-admin服务端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../oss-configserver/README.md">
+            
+                <span>
+            
+                    
+                    oss-configserver微服务配置中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../oss-configserver/INTRODUCTION_OF_YML.md">
+            
+                <span>
+            
+                    
+                    yml配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../oss-configserver/MANUAL_FOR_USER.md">
+            
+                <span>
+            
+                    
+                    用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.3" data-path="../../oss-configserver/MANUAL_FOR_ADMIN.md">
+            
+                <span>
+            
+                    
+                    管理员手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.4" data-path="../../oss-configserver/MANUAL_FOR_OPS.md">
+            
+                <span>
+            
+                    
+                    运维手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.5" data-path="../../oss-configserver/PERMISSIONS.md">
+            
+                <span>
+            
+                    
+                    安全机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.6" data-path="../../oss-configserver/PERFORMANCE.md">
+            
+                <span>
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.7" data-path="../../oss-configserver/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss-configserver或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../oss-configlint/README.md">
+            
+                <span>
+            
+                    
+                    oss-configlint配置文件检查工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../oss-keygen/README.md">
+            
+                <span>
+            
+                    
+                    oss-keygen配置密钥生成工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../LOCALNEXUS.md">
+            
+                <span>
+            
+                    
+                    在本地搭建nexus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../../MVNSITE.md">
+            
+                <span>
+            
+                    
+                    在本地搭建maven网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part V</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    oss-todomvc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../oss-todomvc-sdk/">
+            
+                <a href="../oss-todomvc-sdk/">
+            
+                    
+                    oss-todomvc-sdk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../oss-todomvc-security/">
+            
+                <a href="../oss-todomvc-security/">
+            
+                    
+                    oss-todomvc-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../oss-todomvc-jquery/">
+            
+                <a href="../oss-todomvc-jquery/">
+            
+                    
+                    oss-todomvc-jquery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../oss-todomvc-react/">
+            
+                <a href="../oss-todomvc-react/">
+            
+                    
+                    oss-todomvc-react
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../oss-todomvc-thymeleaf/">
+            
+                <a href="../oss-todomvc-thymeleaf/">
+            
+                    
+                    oss-todomvc-thymeleaf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss-todomvc或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../oss-archetype/">
+            
+                <a href="../../oss-archetype/">
+            
+                    
+                    oss-archetype项目骨架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../oss-archetype/oss-archetype-micro-service/">
+            
+                <a href="../../oss-archetype/oss-archetype-micro-service/">
+            
+                    
+                    微服务项目骨架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../oss-archetype/oss-archetype-micro-service-config/">
+            
+                <a href="../../oss-archetype/oss-archetype-micro-service-config/">
+            
+                    
+                    微服务配置repo骨架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part VI</li>
+        
+        
+    
+        <li class="chapter active" data-level="6.1" data-path="FEIGN_TUTORIAL.html">
+            
+                <a href="FEIGN_TUTORIAL.html">
+            
+                    
+                    附录 feign和ribbon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="CONTRIBUTION.html">
+            
+                <a href="CONTRIBUTION.html">
+            
+                    
+                    https服务搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >附录 feign和ribbon</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="feign-&#x4F7F;&#x7528;&#x7B80;&#x4ECB;">Feign &#x4F7F;&#x7528;&#x7B80;&#x4ECB;</h1>
+<p>Feign&#x662F;&#x4E00;&#x4E2A;&#x58F0;&#x660E;&#x5F0F;&#x7684;web service&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5B83;&#x4F7F;&#x5F97;&#x7F16;&#x5199;web service&#x5BA2;&#x6237;&#x7AEF;&#x66F4;&#x4E3A;&#x5BB9;&#x6613;&#x3002;&#x521B;&#x5EFA;&#x63A5;&#x53E3;&#xFF0C;&#x4E3A;&#x63A5;&#x53E3;&#x6DFB;&#x52A0;&#x6CE8;&#x89E3;&#xFF0C;&#x5373;&#x53EF;&#x4F7F;&#x7528;Feign&#x3002;Feign&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Feign&#x6CE8;&#x89E3;&#x6216;&#x8005; JAX-RS&#x6CE8;&#x89E3;&#xFF0C;&#x8FD8;&#x652F;&#x6301;&#x70ED;&#x63D2;&#x62D4;&#x7684;&#x7F16;&#x7801;&#x5668;&#x548C;&#x89E3;&#x7801;&#x5668;&#x3002;Spring  Cloud&#x4E3A;Feign&#x6DFB;&#x52A0;&#x4E86; Spring MVC&#x7684;&#x6CE8;&#x89E3;&#x652F;&#x6301;&#xFF0C;&#x5E76;&#x6574;&#x5408;&#x4E86;Ribbon&#x548C;Eureka&#x6765;&#x4E3A;&#x4F7F;&#x7528;Feign&#x65F6;&#x63D0;&#x4F9B;&#x8D1F;&#x8F7D;&#x5747; &#x8861;&#x3002;</p>
+<blockquote>
+<p>&#x8BD1;&#x81EA;&#xFF1A;<a href="http://cloud.spring.io/spring-cloud-static/Camden.SR3/#spring-cloud-feign" target="_blank">http://cloud.spring.io/spring-cloud-static/Camden.SR3/#spring-cloud-feign</a></p>
+</blockquote>
+<p>Feign&#x793A;&#x4F8B;</p>
+<h3 id="&#x914D;&#x7F6E;&#x57FA;&#x4E8E;oss-eureka&#x670D;&#x52A1;&#x4EE5;&#x53CA;todomvc-app&#x670D;&#x52A1;">&#x914D;&#x7F6E;(&#x57FA;&#x4E8E;oss-eureka&#x670D;&#x52A1;&#x4EE5;&#x53CA;todomvc-app&#x670D;&#x52A1;)</h3>
+<p>1.pom&#x589E;&#x52A0;&#x5982;&#x4E0B;</p>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-eureka&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-feign&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+</code></pre><p>2.&#x521B;&#x5EFA;&#x542F;&#x52A8;&#x7C7B;</p>
+<pre><code>    /**
+     * &#x4F7F;&#x7528;@EnableFeignClients&#x5F00;&#x542F;Feign
+     * 
+     * @author eacdy
+     */
+    @SpringBootApplication
+    @EnableFeignClients
+    @EnableDiscoveryClient
+    public class FeignDemoApplication {
+      public static void main(String[] args) {
+        SpringApplication.run(MovieFeignApplication.class, args);
+      }
+   }
+</code></pre><p>3.&#x5B9E;&#x4F53;&#x7C7B;</p>
+<pre><code>    @Data
+    public class TodoModel implements Serializable {
+
+      private static final long serialVersionUID = -1;
+
+      private Long id;
+
+      private String title;
+
+      private Boolean completed;
+    }
+</code></pre><p>4.Feign&#x6D4B;&#x8BD5;&#x7C7B;&#xFF1A;FeignDemoClient</p>
+<pre><code>    /**
+     * &#x4F7F;&#x7528; @FeignClient(&quot;oss-todomvc-app&quot;)
+     * &#x6CE8;&#x89E3;&#x7ED1;&#x5B9A;oss-todomvc-app&#x670D;&#x52A1;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;url&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;URL(&#x5177;&#x4F53;&#x6307;&#x5B9A;url&#x540E;&#x5C31;&#x7528;&#x4E0D;&#x4E0A;ribbon&#x4E86;)
+     * 
+     * &#x82E5;&#x4F7F;&#x7528;https&#x5219;&#x53EF;&#x4EE5; @FeignClient(&quot;https://oss-todomvc-app&quot;)
+     */
+    // @FeignClient(name = &quot;https://oss-todomvc-app&quot;)
+    @FeignClient(name = &quot;oss-todomvc-app&quot;)
+    @RequestMapping(&quot;/api/todos&quot;)
+    public interface FeignDemoClient {
+      @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.GET)
+      TodoModel query(final @PathVariable(&quot;id&quot;) Long id);
+
+      @RequestMapping(method = RequestMethod.GET)
+      List&lt;TodoModel&gt; findAll();
+
+      @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.PUT)
+      void update(final @PathVariable(&quot;id&quot;) Long id, final @RequestBody TodoModel model);
+
+      @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
+      produces = MediaType.APPLICATION_JSON_VALUE)
+      TodoModel add(final @RequestBody TodoModel model);
+
+      @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.DELETE)
+      void delete(final @PathVariable(&quot;id&quot;) Long id);
+    }
+</code></pre><p>5.Feign&#x7684;&#x6D4B;&#x8BD5;&#x7C7B;&#xFF1A;FeiDemoController.java</p>
+<pre><code>    @RestController
+    @RequestMapping(&quot;/feign/api/todos&quot;)
+    public class FeiDemoController {
+      @Autowired
+      private FeignDemoClient feignDemoClient;
+
+      @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.GET)
+      public TodoModel query(final @PathVariable(&quot;id&quot;) Long id) {
+        return feignDemoClient.query(id);
+      }
+
+      @RequestMapping(method = RequestMethod.GET)
+      public List&lt;TodoModel&gt; findAll() {
+        return feignDemoClient.findAll();
+      }
+
+      @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.PUT)
+      public void update0(final @PathVariable(&quot;id&quot;) Long id, final @RequestBody TodoModel model) {
+        model.setId(id);
+        feignDemoClient.update(id, model);
+      }
+
+      @RequestMapping(method = RequestMethod.POST)
+      public TodoModel add(final @RequestBody TodoModel model) throws Throwable {
+          return feignDemoClient.add(model);
+      }
+
+      @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.DELETE)
+      public void delete(final @PathVariable(&quot;id&quot;) Long id) {
+        feignDemoClient.delete(id);
+      }
+    }
+</code></pre><p>6.feign-demo.yml</p>
+<pre><code>    server:   
+      port: 9020
+      error:
+        includeStacktrace: ALWAYS
+
+    app.error.handlerEnabled: false    
+
+    spring:    
+      application:
+        name: oss-todomvc-app-feign
+    eureka:
+      client: 
+        serviceUrl:
+          defaultZone: http://localhost:8761/eureka/   
+      instance:
+        preferIpAddress:  true 
+    ribbon:
+      eureka:
+        enabled: true #&#x9ED8;&#x8BA4;&#x4E3A;true&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;false&#xFF0C;Ribbon&#x5C06;&#x4E0D; &#x4F1A;&#x4ECE;Eureka&#x4E2D;&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5217;&#x8868;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x914D;&#x7F6E;&#x7684;&#x670D;&#x52A1;&#x5217;&#x8868;&#x3002;&#x9759;&#x6001;&#x670D;&#x52A1;&#x5217;&#x8868;&#x53EF;&#x4F7F;&#x7528;&#xFF1A;&lt; client&gt;.ribbon.listOfServers&#x6765;&#x6307;&#x5B9A;&#x3002;&#x53C2;&#x8003;&#xFF1A;http://projects.spring.i o/spring-cloud/docs/1.0.3/spring-cloud.html#spring-cloud-ribbonwithout-eureka
+</code></pre><p>7.&#x8FD0;&#x884C; &#x8BBF;&#x95EE;feigndemo&#x9879;&#x76EE;&#x5373;&#x53EF;&#x5F97;&#x5230;&#x548C;&#x8BBF;&#x95EE;todomvc-app&#x670D;&#x52A1;&#x4E00;&#x6837;&#x7684;&#x7ED3;&#x679C;</p>
+<h3 id="feign-https&#x65B9;&#x5F0F;&#x7684;&#x4F7F;&#x7528;">feign https&#x65B9;&#x5F0F;&#x7684;&#x4F7F;&#x7528;</h3>
+<p>1.&#x5728;&#x8BC1;&#x4E66;&#x4E4B;&#x7C7B;&#x7684;&#x914D;&#x7F6E;&#x6CA1;&#x95EE;&#x9898;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x914D;&#x7F6E; <code>@FeignClient(&quot;https://oss-todomvc-app&quot;)</code></p>
+<p>2.&#x8BC1;&#x4E66;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x89C1;<a href="CONTRIBUTION.html">CONTRIBUTION</a></p>
+<h3 id="feign-&#x7684;&#x6027;&#x80FD;">feign &#x7684;&#x6027;&#x80FD;</h3>
+<p>1.&#x5728;&#x6211;&#x672C;&#x5730;&#x53F0;&#x5F0F;&#x673A;&#x7684;&#x6D4B;&#x8BD5;&#x60C5;&#x51B5;&#x5982;&#x4E0B;</p>
+<p>&#x4F7F;&#x7528;kmeter&#x6765;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;5&#x4E2A;&#x7EBF;&#x7A0B;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x5FAA;&#x73AF;100&#x6B21;&#xFF0C;&#x6BCF;&#x6B21;&#x6709;&#x4E24;&#x4E2A;&#x8BF7;&#x6C42;(&#x67E5;&#x8BE2;&#x548C;&#x6DFB;&#x52A0;,&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x5927;&#xFF0C;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x4E0D;&#x53D8;&#xFF09;&#x3002;</p>
+<p>&#x76F4;&#x63A5;&#x8BF7;&#x6C42;provider&#x7AEF;</p>
+<p><img src="src/readme/httpway.png" alt="&#x76F4;&#x63A5;&#x8BF7;&#x6C42;provider&#x7684;&#x805A;&#x5408;&#x62A5;&#x544A;"></p>
+<p>&#x8BF7;&#x6C42;feiclient&#x7AEF;</p>
+<p><img src="src/readme/feignway.png" alt="&#x8BF7;&#x6C42;feiclient&#x7AEF;&#x7684;&#x805A;&#x5408;&#x62A5;&#x544A;"></p>
+<h3 id="feign-&#x76F8;&#x5173;&#x7814;&#x7A76;">feign &#x76F8;&#x5173;&#x7814;&#x7A76;</h3>
+<p>1.@FeignClient&#x5F53;url&#x6709;&#x503C;&#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;&#x6309;url&#x53BB;&#x8BF7;&#x6C42;&#xFF0C;&#x4E0D;&#x7ECF;&#x8FC7;ribbon&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x3002;name&#x82E5;&#x662F;&#x4EE5;http&#x5F00;&#x5934;&#x5219;&#x4E0D;&#x7528;&#x4FEE;&#x6539;&#xFF08;&#x5373;&#x53EF;&#x4F7F;&#x7528;https&#xFF09;&#x5426;&#x5219;&#x524D;&#x9762;&#x589E;&#x52A0;http://</p>
+<pre><code>    FeignClientFactoryBean.getObject();
+
+    @Override
+    public Object getObject() throws Exception {
+      FeignContext context = applicationContext.getBean(FeignContext.class);
+      Feign.Builder builder = feign(context);
+
+      if (!StringUtils.hasText(this.url)) {
+        String url;
+        if (!this.name.startsWith(&quot;http&quot;)) {
+          url = &quot;http://&quot; + this.name;
+    }
+        else {
+          url = this.name;
+        }
+        url += cleanPath();
+        return loadBalance(builder, context, new HardCodedTarget&lt;&gt;(this.type,this.name, url));
+      }
+      if (StringUtils.hasText(this.url) &amp;&amp; !this.url.startsWith(&quot;http&quot;)) {
+        this.url = &quot;http://&quot; + this.url;
+      }
+      String url = this.url + cleanPath();
+      return targeter.target(this, builder, context, new HardCodedTarget&lt;&gt;(this.type, this.name, url));
+   }
+</code></pre><p>2.&#x82E5;&#x4F7F;&#x7528;&#x4E86;ribbon,&#x4F1A;&#x53D6;&#x4E00;&#x4E2A;client&#x6765;&#x5B9E;&#x73B0;http&#x8BF7;&#x6C42;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;LoadBalancerFeignClient&#x5904;&#x7406;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<pre><code>    protected &lt;T&gt; T loadBalance(Feign.Builder builder, FeignContext context,HardCodedTarget&lt;T&gt; target) {
+      Client client = getOptional(context, Client.class);
+      if (client != null) {
+        builder.client(client);
+        return targeter.target(this, builder, context, target);
+      }
+
+      throw new IllegalStateException(&quot;No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-ribbon?&quot;);
+    }
+</code></pre><p>3.LoadBalancerFeignClient&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x771F;&#x6B63;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;client&#x9ED8;&#x8BA4;&#x662F;Client.Default</p>
+<blockquote>
+<p>Feign&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x7684;&#x662F;JDK&#x539F;&#x751F;&#x7684;URLConnection&#x53D1;&#x9001;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x6CA1;&#x6709;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x6BCF;&#x4E2A;&#x5730;&#x5740;&#x4F1A;&#x4FDD;&#x6301;&#x4E00;&#x4E2A;&#x957F;&#x8FDE;&#x63A5;&#xFF0C;&#x5373;&#x5229;&#x7528;HTTP&#x7684;persistence connection &#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;Apache&#x7684;HTTP Client&#x66FF;&#x6362;Feign&#x539F;&#x59CB;&#x7684;http client, &#x4ECE;&#x800C;&#x83B7;&#x53D6;&#x8FDE;&#x63A5;&#x6C60;&#x3001;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x7B49;&#x4E0E;&#x6027;&#x80FD;&#x606F;&#x606F;&#x76F8;&#x5173;&#x7684;&#x63A7;&#x5236;&#x80FD;&#x529B;&#x3002;Spring Cloud&#x4ECE;Brixtion.SR5&#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x66FF;&#x6362;&#xFF0C;&#x9996;&#x5148;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x58F0;&#x660E;Apache HTTP Client&#x548C;feign-httpclient&#x4F9D;&#x8D56;&#xFF1A;</p>
+</blockquote>
+<pre><code>    &lt;!-- &#x4F7F;&#x7528;Apache HttpClient&#x66FF;&#x6362;Feign&#x539F;&#x751F;httpclient --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
+      &lt;artifactId&gt;httpclient&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.netflix.feign&lt;/groupId&gt;
+      &lt;artifactId&gt;feign-httpclient&lt;/artifactId&gt;
+      &lt;version&gt;${feign-httpclient}&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre><p>4.&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x5730;&#x65B9;</p>
+<p>spring&#x63D0;&#x4F9B;&#x4E86;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x66FF;&#x6362;</p>
+<ul>
+<li><p>Decoder feignDecoder: ResponseEntityDecoder (which wraps a SpringDecoder)</p>
+</li>
+<li><p>Encoder feignEncoder: SpringEncoder</p>
+</li>
+<li><p>Logger feignLogger: Slf4jLogger</p>
+</li>
+<li><p>Contract feignContract: SpringMvcContract</p>
+</li>
+<li><p>Feign.Builder feignBuilder: HystrixFeign.Builder</p>
+</li>
+</ul>
+<p>spring &#x4F7F;&#x7528;&#x4E86;feign&#x9ED8;&#x8BA4;&#x7684;&#x4F46;&#x662F;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x5236;</p>
+<ul>
+<li><p>Logger.Level</p>
+</li>
+<li><p>Retryer</p>
+</li>
+<li><p>ErrorDecoder oss-errorhandle &#x63D0;&#x4F9B;&#x4E86;&#x8FD9;&#x4E2A;</p>
+</li>
+<li><p>Request.Options</p>
+</li>
+<li><p>Collection&lt;RequestInterceptor&gt;</p>
+</li>
+</ul>
+<h3 id="feign-&#x548C;-dubbo">feign &#x548C; dubbo</h3>
+<p>dubbo <a href="http://dubbo.io/" target="_blank">dubbo&#x6587;&#x6863;</a>
+dubbox <a href="https://github.com/shuvigoss/dubbox" target="_blank">dubbox&#x6587;&#x6863;</a></p>
+<p>&gt;
+&#x5728;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x4E2D;&#xFF0C;&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x8005;&#x4EE5;&#x4F55;&#x79CD;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x662F;&#x4E00;&#x9879;&#x5FC5;&#x987B;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5728;Spring Cloud(Netflix)&#x6280;&#x672F;&#x6808;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x662F;&#x4EE5;HTTP REST&#x63A5;&#x53E3;&#x7684;&#x5F62;&#x5F0F;&#x66B4;&#x9732;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x6267;&#x884C;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;HTTP&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x7136;&#x540E;&#x5411;&#x670D;&#x52A1;&#x53D1;&#x8D77;HTTP&#x8BF7;&#x6C42;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;Netflix&#x7684;Feign&#x4F5C;&#x4E3A;Http Client&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x50CF;Dubbo&#x4E00;&#x6837;&#xFF0C;&#x670D;&#x52A1;&#x7684;&#x8C03;&#x7528;&#x8005;<strong><em>&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;</em></strong>&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5E38;&#x89C4;&#x7684;Http Client&#x6784;&#x9020;&#x8BF7;&#x6C42;&#x518D;&#x89E3;&#x6790;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x3002;</p>
+<p>&gt;
+&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x5F53;&#x7531;&#x670D;&#x52A1;&#x7684;&#x8C03;&#x7528;&#x8005;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;HTTP Client&#x5411;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x574F;&#x5904;&#x662F;&#x8C03;&#x7528;&#x8005;&#x5FC5;&#x987B;&#x5BF9;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x7684;HTTP REST&#x63A5;&#x53E3;&#x975E;&#x5E38;&#x4E86;&#x89E3;&#x3002;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x53D8;&#x901A;&#x4E00;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;<strong><em>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;API&#x5305;</em></strong>&#xFF0C;&#x8FD9;&#x4E2A;&#x5305;&#x4E2D;&#x53EA;&#x6709;@FeignClient&#x7684;&#x58F0;&#x660E;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x670D;&#x52A1;&#x7684;&#x8C03;&#x7528;&#x7AEF;&#x901A;&#x8FC7;maven&#x5F15;&#x5165;&#x8BE5;API&#x5305;&#xFF0C;&#x8FD9;&#x6837;&#x8C03;&#x7528;&#x8005;&#x5C31;&#x65E0;&#x9700;&#x5173;&#x5FC3;&#x5B9E;&#x9645;&#x7684;REST&#x63A5;&#x53E3;&#x800C;&#x662F;&#x50CF;&#x8C03;&#x7528;&#x672C;&#x5730;&#x65B9;&#x6CD5;&#x4E00;&#x6837;&#x8C03;&#x7528;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x4E86;&#x3002;</p>
+<p>&gt;</p>
+<ol>
+<li>&#x662F;&#x4E00;&#x5957;&#x5B8C;&#x6574;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x5B83;&#x7684;&#x5B50;&#x9879;&#x76EE;&#x6DB5;&#x76D6;&#x4E86;&#x6240;&#x6709;&#x5B9E;&#x73B0;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x6240;&#x9700;&#x8981;&#x7684;&#x57FA;&#x7840;&#x8F6F;&#x4EF6;&#x8BBE;&#x65BD;</li>
+<li>&#x57FA;&#x4E8E;Spring Boot, &#x4F7F;&#x5F97;&#x5F00;&#x53D1;&#x90E8;&#x7F72;&#x6781;&#x5176;&#x7B80;&#x5355;(&#x52A0;&#x4F9D;&#x8D56;&#xFF0C;&#x52A0;&#x6CE8;&#x89E3;&#xFF0C;&#x5C31;&#x80FD;&#x8FD0;&#x884C;&#x4E86;)</li>
+</ol>
+<p>&gt;
+&#x8981;&#x8BF4;Dubbo&#xFF0C;&#x7B97;&#x662F;Spring Cloud&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#x597D;&#x4E86;,&#x5927;&#x81F4;&#x76F8;&#x5F53;&#x4E8E;Spring Cloud&#x91CC;&#x7684; Eureka + Feign + 1/2Hystrix</p>
+<p>&gt;
+Dubbo &#x662F;&#x963F;&#x91CC;&#x5DF4;&#x5DF4;&#x516C;&#x53F8;&#x5F00;&#x6E90;&#x7684;&#x4E00;&#x4E2A;&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x79C0;&#x7684;&#x670D;&#x52A1;&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x5F97;&#x5E94;&#x7528;&#x53EF;&#x901A;&#x8FC7;&#x9AD8;&#x6027;&#x80FD;&#x7684; RPC &#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x7684;&#x8F93;&#x51FA;&#x548C;&#x8F93;&#x5165;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x548C; Spring&#x6846;&#x67B6;&#x65E0;&#x7F1D;&#x96C6;&#x6210;&#x3002;
+&gt;
+&#x4E3B;&#x8981;&#x6838;&#x5FC3;&#x90E8;&#x4EF6;&#xFF1A;
+&gt;
+Remoting: &#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x6846;&#x67B6;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86; sync-over-async &#x548C; request-response &#x6D88;&#x606F;&#x673A;&#x5236;.
+&gt;
+RPC: &#x4E00;&#x4E2A;&#x8FDC;&#x7A0B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x3001;&#x5BB9;&#x707E;&#x548C;&#x96C6;&#x7FA4;&#x529F;&#x80FD;
+&gt;
+Registry: &#x670D;&#x52A1;&#x76EE;&#x5F55;&#x6846;&#x67B6;&#x7528;&#x4E8E;&#x670D;&#x52A1;&#x7684;&#x6CE8;&#x518C;&#x548C;&#x670D;&#x52A1;&#x4E8B;&#x4EF6;&#x53D1;&#x5E03;&#x548C;&#x8BA2;&#x9605;</p>
+<p>&gt;
+<a href="http://blog.didispace.com/microservice-framework/" target="_blank">&#x7F51;&#x4E0A;&#x6587;&#x7AE0;</a></p>
+<p>&#x4E2A;&#x4EBA;&#x89C2;&#x70B9; feign&#x662F;spring cloud&#x4E2D;&#x4E00;&#x90E8;&#x5206;&#x751F;&#x6001;&#x5B8C;&#x6574;&#xFF0C;spring&#x56E2;&#x961F;&#x5B9E;&#x529B;&#x9760;&#x8C31;&#xFF0C;&#x793E;&#x533A;&#x6D3B;&#x8DC3;&#x5EA6;&#x9AD8;&#xFF0C;http&#x534F;&#x8BAE;&#xFF0C;dubbo &#x9AD8;&#x6548;&#xFF0C;&#x6587;&#x6863;&#x5168;&#xFF0C;&#x53EF;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#xFF08;spi&#x673A;&#x5236;&#xFF09;&#xFF0C;&#x80FD;&#x4E0E;spring&#x65E0;&#x7F1D;&#x96C6;&#x6210;&#xFF08;dubbox&#x652F;&#x6301;rest&#xFF09;&#x3002;</p>
+<h2 id="&#x4E0E;errorhandle&#x7ED3;&#x5408;&#x76F8;&#x5173;">&#x4E0E;errorhandle&#x7ED3;&#x5408;&#x76F8;&#x5173;</h2>
+<ol>
+<li>app.error.handlerEnabled: false </li>
+<li>app.error.includeStacktrace AWAYS  ...</li>
+</ol>
+<h2 id="ribbon">ribbon</h2>
+<p><a href="https://yq.aliyun.com/articles/61823" target="_blank">&#x7F51;&#x4E0A;&#x597D;&#x6587;</a></p>
+<p>&gt;
+Ribbon&#x662F;Netflix &#x53D1;&#x5E03;&#x7684;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x63D0;&#x4F9B;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8F6F;&#x4EF6;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;&#xFF0C;&#x5C06;Netflix&#x7684;&#x4E2D;&#x95F4;&#x5C42;&#x670D;&#x52A1;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x3002;Ribbon&#x5BA2;&#x6237;&#x7AEF;&#x7EC4; &#x4EF6;&#x63D0;&#x4F9B;&#x4E00;&#x7CFB;&#x5217;&#x5B8C;&#x5584;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x5982;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#xFF0C;&#x91CD;&#x8BD5;&#x7B49;&#x3002;&#x7B80;&#x5355;&#x7684;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x5217;&#x51FA;Load Balancer&#x540E;&#x9762;&#x6240;&#x6709;&#x7684;&#x673A;&#x5668;&#xFF0C;Ribbon&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x5E2E;&#x52A9;&#x4F60;&#x57FA;&#x4E8E;&#x67D0;&#x79CD;&#x89C4;&#x5219;&#xFF08;&#x5982;&#x7B80;&#x5355;&#x8F6E;&#x8BE2;&#xFF0C;&#x968F;&#x5373;&#x8FDE;&#x63A5;&#x7B49;&#xFF09;&#x53BB;&#x8FDE;&#x63A5;&#x8FD9;&#x4E9B;&#x673A;&#x5668;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#x4F7F;&#x7528;Ribbon&#x5B9E;&#x73B0; &#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>&gt;
+Ribbon&#x5DE5;&#x4F5C;&#x65F6;&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF1A;&#x7B2C;&#x4E00;&#x6B65;&#x5148;&#x9009;&#x62E9;  Eureka Server, &#x5B83;&#x4F18;&#x5148;&#x9009;&#x62E9;&#x5728;&#x540C;&#x4E00;&#x4E2A;Zone &#x4E14;&#x8D1F;&#x8F7D;&#x8F83;&#x5C11;&#x7684;Server&#xFF1B;&#x7B2C;&#x4E8C;&#x6B65;&#x518D;&#x6839;&#x636E;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x5728;&#x4ECE;Server&#x53D6;&#x5230;&#x7684;&#x670D;&#x52A1;&#x6CE8;&#x518C; &#x5217;&#x8868;&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x3002;&#x5176;&#x4E2D;Ribbon&#x63D0;&#x4F9B;&#x4E86;&#x4E09;&#x79CD;&#x7B56;&#x7565;&#xFF1A;&#x8F6E;&#x8BE2;&#x3001;&#x65AD;&#x8DEF;&#x5668;&#x548C;&#x6839;&#x636E;&#x54CD;&#x5E94;&#x65F6;&#x95F4; &#x52A0;&#x6743;</p>
+<h3 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h3>
+<p>1.&#x589E;&#x52A0;pom(&#x4F7F;&#x7528;feign&#x7684;&#x8BDD;ribbon&#x4E0D;&#x7528;&#x6DFB;&#x52A0;&#x662F;&#x81EA;&#x5E26;&#x7684;)</p>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-ribbon&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+</code></pre><p>2.&#x901A;&#x8FC7;@LoadBalanced&#x6CE8;&#x89E3;&#x5F00;&#x542F;&#x5747;&#x8861;&#x8D1F;&#x8F7D;&#x80FD;&#x529B;.(RestTemplate)</p>
+<pre><code>    /**
+     * &#x5B9E;&#x4F8B;&#x5316;RestTemplate&#xFF0C;&#x901A;&#x8FC7;@LoadBalanced&#x6CE8;&#x89E3;&#x5F00;&#x542F;&#x5747;&#x8861;&#x8D1F;&#x8F7D;&#x80FD;&#x529B;.
+     * 
+     * @return restTemplate
+     */
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+      return new RestTemplate();
+    }
+</code></pre><p>3.&#x7F16;&#x5199;&#x670D;&#x52A1;&#x7C7B;</p>
+<pre><code>    @Service
+    public class RibbonDemoClient {
+
+      @Value(&quot;http://${ENV:development}-oss-todomvc-app&quot;)
+      private String todoServiceUrl;
+
+      @Autowired
+      private RestTemplate restTemplate;
+
+      @SuppressWarnings(&quot;unchecked&quot;)
+      public List&lt;TodoModel&gt; findByAll() { // http://&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x7684;serviceId/url
+        return this.restTemplate.getForObject(todoServiceUrl + &quot;/api/todos&quot;, List.class);
+      }
+    }
+</code></pre><p>4.&#x7F16;&#x5199;controller&#x7565;</p>
+<p>5.&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x7B49;</p>
+<ul>
+<li>IClientConfig ribbonClientConfig: DefaultClientConfigImpl</li>
+<li>IRule ribbonRule: ZoneAvoidanceRule</li>
+<li>IPing ribbonPing: NoOpPing</li>
+<li>ServerList&lt;Server&gt; ribbonServerList: ConfigurationBasedServerList</li>
+<li>ServerListFilter&lt;Server&gt; ribbonServerListFilter: ZonePreferenceServerListFilter</li>
+<li>ILoadBalancer ribbonLoadBalancer: ZoneAwareLoadBalancer</li>
+</ul>
+<p>&#x4E3E;&#x4F8B;</p>
+<pre><code>    @Bean
+    public IRule ownRule() {
+      return new RandomRule();
+    }
+</code></pre><h2 id="ribbon&#x63D0;&#x4F9B;&#x7684;&#x4E3B;&#x8981;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;&#x4ECB;&#x7ECD;">Ribbon&#x63D0;&#x4F9B;&#x7684;&#x4E3B;&#x8981;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;&#x4ECB;&#x7ECD;</h2>
+<h3 id="&#x7B80;&#x5355;&#x8F6E;&#x8BE2;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF08;roundrobin&#xFF09;">&#x7B80;&#x5355;&#x8F6E;&#x8BE2;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF08;RoundRobin&#xFF09;</h3>
+<p>&#x4EE5;&#x8F6E;&#x8BE2;&#x7684;&#x65B9;&#x5F0F;&#x4F9D;&#x6B21;&#x5C06;&#x8BF7;&#x6C42;&#x8C03;&#x5EA6;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5373;&#x6BCF;&#x6B21;&#x8C03;&#x5EA6;&#x6267;&#x884C;i = (i + 1) mod n&#xFF0C;&#x5E76;&#x9009;&#x51FA;&#x7B2C;i&#x53F0;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<h3 id="&#x968F;&#x673A;&#x8D1F;&#x8F7D;&#x5747;&#x8861;-&#xFF08;random&#xFF09;">&#x968F;&#x673A;&#x8D1F;&#x8F7D;&#x5747;&#x8861; &#xFF08;Random&#xFF09;</h3>
+<p>&#x968F;&#x673A;&#x9009;&#x62E9;&#x72B6;&#x6001;&#x4E3A;UP&#x7684;Server</p>
+<h3 id="&#x52A0;&#x6743;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x8D1F;&#x8F7D;&#x5747;&#x8861;-&#xFF08;weightedresponsetime&#xFF09;">&#x52A0;&#x6743;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x8D1F;&#x8F7D;&#x5747;&#x8861; &#xFF08;WeightedResponseTime&#xFF09;</h3>
+<h3 id="&#x533A;&#x57DF;&#x611F;&#x77E5;&#x8F6E;&#x8BE2;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF08;zoneaware&#xFF09;">&#x533A;&#x57DF;&#x611F;&#x77E5;&#x8F6E;&#x8BE2;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF08;ZoneAware&#xFF09;</h3>
+<p>&#x533A; &#x57DF;&#x611F;&#x77E5;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5185;&#x7F6E;&#x7535;&#x8DEF;&#x8DF3;&#x95F8;&#x903B;&#x8F91;&#xFF0C;&#x53EF;&#x88AB;&#x914D;&#x7F6E;&#x57FA;&#x4E8E;&#x533A;&#x57DF;&#x540C;&#x6E90;&#x5173;&#x7CFB;&#xFF08;Zone Affinity&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x66F4;&#x503E;&#x5411;&#x4E8E;&#x9009;&#x62E9;&#x53D1;&#x51FA;&#x8C03;&#x7528;&#x7684;&#x670D;&#x52A1;&#x6240;&#x5728;&#x7684;&#x6258;&#x7BA1;&#x533A;&#x57DF;&#x5185;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x5EF6;&#x8FDF;&#xFF0C;&#x8282;&#x7701;&#x6210;&#x672C;&#xFF09;&#x9009;&#x62E9;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5B9E;&#x4F8B;&#x3002;&#x5B83;&#x76D1;&#x63A7;&#x6BCF;&#x4E2A;&#x533A;&#x57DF;&#x4E2D;&#x8FD0;&#x884C;&#x5B9E;&#x4F8B;&#x7684;&#x884C; &#x4E3A;&#xFF0C;&#x800C;&#x4E14;&#x80FD;&#x591F;&#x5B9E;&#x65F6;&#x7684;&#x5FEB;&#x901F;&#x4E22;&#x5F03;&#x4E00;&#x6574;&#x4E2A;&#x533A;&#x57DF;&#x3002;&#x8FD9;&#x6837;&#x5728;&#x9762;&#x5BF9;&#x6574;&#x4E2A;&#x533A;&#x57DF;&#x6545;&#x969C;&#x65F6;&#xFF0C;&#x5E2E;&#x6211;&#x4EEC;&#x63D0;&#x5347;&#x4E86;&#x5F39;&#x6027;&#x3002;</p>
+<h2 id="ribbon&#x81EA;&#x5E26;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;&#x6BD4;&#x8F83;">Ribbon&#x81EA;&#x5E26;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;&#x6BD4;&#x8F83;</h2>
+  <table class="confluenceTable">
+    <tbody>
+      <tr>
+        <td class="confluenceTd">&#x7B56;&#x7565;&#x540D;</td>
+        <td class="confluenceTd">&#x7B56;&#x7565;&#x58F0;&#x660E;</td>
+        <td class="confluenceTd">&#x7B56;&#x7565;&#x63CF;&#x8FF0;</td>
+        <td class="confluenceTd">&#x5B9E;&#x73B0;&#x8BF4;&#x660E;</td>
+      </tr>
+      <tr>
+        <td class="confluenceTd">BestAvailableRule</td>
+        <td class="confluenceTd">public class BestAvailableRule extends ClientConfigEnabledRoundRobinRule</td>
+        <td class="confluenceTd">&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x7684;&#x5E76;&#x53D1;&#x8BF7;&#x6C42;&#x7684;server</td>
+        <td class="confluenceTd">&#x9010;&#x4E2A;&#x8003;&#x5BDF;Server&#xFF0C;&#x5982;&#x679C;Server&#x88AB;tripped&#x4E86;&#xFF0C;&#x5219;&#x5FFD;&#x7565;&#xFF0C;&#x5728;&#x9009;&#x62E9;&#x5176;&#x4E2D;ActiveRequestsCount&#x6700;&#x5C0F;&#x7684;server</td>
+      </tr>
+      <tr>
+        <td class="confluenceTd">AvailabilityFilteringRule</td>
+        <td class="confluenceTd">public class AvailabilityFilteringRule extends PredicateBasedRule</td>
+        <td class="confluenceTd">&#x8FC7;&#x6EE4;&#x6389;&#x90A3;&#x4E9B;&#x56E0;&#x4E3A;&#x4E00;&#x76F4;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#x7684;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;circuit tripped&#x7684;&#x540E;&#x7AEF;server&#xFF0C;&#x5E76;&#x8FC7;&#x6EE4;&#x6389;&#x90A3;&#x4E9B;&#x9AD8;&#x5E76;&#x53D1;&#x7684;&#x7684;&#x540E;&#x7AEF;server&#xFF08;active connections &#x8D85;&#x8FC7;&#x914D;&#x7F6E;&#x7684;&#x9608;&#x503C;&#xFF09;</td>
+        <td class="confluenceTd">&#x4F7F;&#x7528;&#x4E00;&#x4E2A;AvailabilityPredicate&#x6765;&#x5305;&#x542B;&#x8FC7;&#x6EE4;server&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x5C31;&#x662F;&#x68C0;&#x67E5;status&#x91CC;&#x8BB0;&#x5F55;&#x7684;&#x5404;&#x4E2A;server&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;</td>
+      </tr>
+      <tr>
+        <td class="confluenceTd">WeightedResponseTimeRule</td>
+        <td class="confluenceTd">public class WeightedResponseTimeRule extends RoundRobinRule</td>
+        <td class="confluenceTd">&#x6839;&#x636E;&#x76F8;&#x5E94;&#x65F6;&#x95F4;&#x5206;&#x914D;&#x4E00;&#x4E2A;weight&#xFF0C;&#x76F8;&#x5E94;&#x65F6;&#x95F4;&#x8D8A;&#x957F;&#xFF0C;weight&#x8D8A;&#x5C0F;&#xFF0C;&#x88AB;&#x9009;&#x4E2D;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x8D8A;&#x4F4E;&#x3002;</td>
+        <td class="confluenceTd">&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x5B9A;&#x671F;&#x7684;&#x4ECE;status&#x91CC;&#x9762;&#x8BFB;&#x53D6;&#x8BC4;&#x4EF7;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#xFF0C;&#x4E3A;&#x6BCF;&#x4E2A;server&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;weight&#x3002;Weight&#x7684;&#x8BA1;&#x7B97;&#x4E5F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;responsetime &#x51CF;&#x53BB;&#x6BCF;&#x4E2A;server&#x81EA;&#x5DF1;&#x5E73;&#x5747;&#x7684;responsetime&#x662F;server&#x7684;&#x6743;&#x91CD;&#x3002;&#x5F53;&#x521A;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#xFF0C;&#x6CA1;&#x6709;&#x5F62;&#x6210;statas&#x65F6;&#xFF0C;&#x4F7F;&#x7528;roubine&#x7B56;&#x7565;&#x9009;&#x62E9; server&#x3002;</td>
+      </tr>
+      <tr>
+        <td class="confluenceTd">RetryRule</td>
+        <td class="confluenceTd">public class RetryRule extends AbstractLoadBalancerRule</td>
+        <td class="confluenceTd">&#x5BF9;&#x9009;&#x5B9A;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;&#x673A;&#x4E0A;&#x91CD;&#x8BD5;&#x673A;&#x5236;&#x3002;</td>
+        <td class="confluenceTd">&#x5728;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#x5F53;&#x9009;&#x62E9;server&#x4E0D;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x4E00;&#x76F4;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;subRule&#x7684;&#x65B9;&#x5F0F;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;server</td>
+      </tr>
+      <tr>
+        <td class="confluenceTd">RoundRobinRule</td>
+        <td class="confluenceTd">public class RoundRobinRule extends AbstractLoadBalancerRule</td>
+        <td class="confluenceTd">roundRobin&#x65B9;&#x5F0F;&#x8F6E;&#x8BE2;&#x9009;&#x62E9;server</td>
+        <td class="confluenceTd">&#x8F6E;&#x8BE2;index&#xFF0C;&#x9009;&#x62E9;index&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x7684;server</td>
+      </tr>
+      <tr>
+        <td class="confluenceTd">RandomRule</td>
+        <td class="confluenceTd">public class RandomRule extends AbstractLoadBalancerRule</td>
+        <td class="confluenceTd">&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x4E2A;server</td>
+        <td class="confluenceTd">&#x5728;index&#x4E0A;&#x968F;&#x673A;&#xFF0C;&#x9009;&#x62E9;index&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x7684;server</td>
+      </tr>
+      <tr>
+        <td class="confluenceTd">ZoneAvoidanceRule</td>
+        <td class="confluenceTd">public class ZoneAvoidanceRule extends PredicateBasedRule</td>
+        <td class="confluenceTd">&#x590D;&#x5408;&#x5224;&#x65AD;server&#x6240;&#x5728;&#x533A;&#x57DF;&#x7684;&#x6027;&#x80FD;&#x548C;server&#x7684;&#x53EF;&#x7528;&#x6027;&#x9009;&#x62E9;server</td>
+        <td class="confluenceTd">&#x4F7F; &#x7528;ZoneAvoidancePredicate&#x548C;AvailabilityPredicate&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9009;&#x62E9;&#x67D0;&#x4E2A;server&#xFF0C;&#x524D;&#x4E00;&#x4E2A;&#x5224;&#x65AD;&#x5224;&#x5B9A;&#x4E00;&#x4E2A; zone&#x7684;&#x8FD0;&#x884C;&#x6027;&#x80FD;&#x662F;&#x5426;&#x53EF;&#x7528;&#xFF0C;&#x5254;&#x9664;&#x4E0D;&#x53EF;&#x7528;&#x7684;zone&#xFF08;&#x7684;&#x6240;&#x6709;server&#xFF09;&#xFF0C;AvailabilityPredicate&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;&#x6389;&#x8FDE;&#x63A5;&#x6570;&#x8FC7;&#x591A;&#x7684; Server&#x3002;</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../oss-archetype/oss-archetype-micro-service-config/" class="navigation navigation-prev " aria-label="Previous page: 微服务配置repo骨架">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CONTRIBUTION.html" class="navigation navigation-next " aria-label="Next page: https服务搭建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"附录 feign和ribbon","level":"6.1","depth":1,"next":{"title":"https服务搭建","level":"6.1.1","depth":2,"path":"docs/oss-todomvc/oss-todomvc-app/CONTRIBUTION.md","ref":"docs/oss-todomvc/oss-todomvc-app/CONTRIBUTION.md","articles":[]},"previous":{"title":"微服务配置repo骨架","level":"5.2.2","depth":2,"path":"docs/oss-archetype/oss-archetype-micro-service-config/README.md","ref":"docs/oss-archetype/oss-archetype-micro-service-config/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"张浩伦 Haolun Zhang","pdf":{"pageNumbers":true,"fontSize":8,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":56,"left":56,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"home1开源技术栈","language":"zh-hans","gitbook":">= 1.0.1","direction":"ltr"},"file":{"path":"docs/oss-todomvc/oss-todomvc-app/FEIGN_TUTORIAL.md","mtime":"2017-05-18T10:06:07.636Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-18T10:06:45.031Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

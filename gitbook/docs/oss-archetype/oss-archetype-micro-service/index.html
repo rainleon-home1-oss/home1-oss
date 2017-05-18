@@ -1,0 +1,1757 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>微服务项目骨架 · home1开源技术栈</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="张浩伦 Haolun Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../oss-archetype-micro-service-config/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part I</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../oss/README.md">
+            
+                <span>
+            
+                    
+                    oss是什么
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../oss/INTRODUCTION.md">
+            
+                <span>
+            
+                    
+                    技术栈的软件工程pom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../oss/oss-common-dependencies/README.md">
+            
+                <span>
+            
+                    
+                    技术栈依赖管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../oss/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/README.md">
+            
+                <span>
+            
+                    
+                    spring-boot-1.4.x
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../oss/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/oss-common-dependencies-spring-boot-1.4.1.RELEASE/README.md">
+            
+                <span>
+            
+                    
+                    spring-boot-1.4.1.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../../oss/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/oss-common-dependencies-spring-boot-1.4.2.RELEASE/README.md">
+            
+                <span>
+            
+                    
+                    spring-boot-1.4.2.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../oss/CODESTYLE.md">
+            
+                <span>
+            
+                    
+                    oss的代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../oss/GITFLOW.md">
+            
+                <span>
+            
+                    
+                    oss的分支模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../oss/GIT_FORK_TUTORIAL.md">
+            
+                <span>
+            
+                    
+                    git fork开发文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../oss/GITINSPECT.md">
+            
+                <span>
+            
+                    
+                    各个开发者对项目的贡献
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../oss/MVNSITE.md">
+            
+                <span>
+            
+                    
+                    如何使用oss为项目构建网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../oss/GITBOOK.md">
+            
+                <span>
+            
+                    
+                    如何生成oss的gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../oss/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../oss/SONARQUBE.md">
+            
+                <span>
+            
+                    
+                    使用sonarqube评估代码质量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../oss/THINGS_SHOULD_KNOW.md">
+            
+                <span>
+            
+                    
+                    oss开发者和用户应该知道的n件事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../oss/REFS.md">
+            
+                <span>
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part II</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../oss-release/">
+            
+                <a href="../../oss-release/">
+            
+                    
+                    oss-release依赖管理平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../oss-release/oss-release-spring-boot-1.3.7.RELEASE/README.md">
+            
+                <span>
+            
+                    
+                    oss-release-spring-boot-1.3.7.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../oss-release/oss-release-spring-boot-1.4.1.RELEASE/">
+            
+                <a href="../../oss-release/oss-release-spring-boot-1.4.1.RELEASE/">
+            
+                    
+                    oss-release-spring-boot-1.4.1.RELEASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../oss-release/CONTRIBUTION.html">
+            
+                <a href="../../oss-release/CONTRIBUTION.html">
+            
+                    
+                    如何构建oss-release或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part III</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../oss-lib/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib微服务程序库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../oss-lib/oss-lib-common/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-common
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../oss-lib/oss-lib-swagger/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-swagger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../oss-lib/oss-lib-webmvc/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-webmvc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../oss-lib/oss-lib-errorhandle/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../../oss-lib/oss-lib-errorhandle/INTRODUCTION.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 简单上手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../../oss-lib/oss-lib-errorhandle/INTRODUCTION_DETAIL.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 详细介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="../../oss-lib/oss-lib-errorhandle/TARGET.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.4" data-path="../../oss-lib/oss-lib-errorhandle/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 手动测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.5" data-path="../../oss-lib/oss-lib-errorhandle/SPRINGBOOTDOC.md">
+            
+                <span>
+            
+                    
+                    oss-lib-errorhandle 官方文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../oss-lib/oss-lib-adminclient/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-adminclient
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../../oss-lib/oss-lib-adminclient/ADMIN_CLIENT_CONFIGURATION.md">
+            
+                <span>
+            
+                    
+                    oss-admin客户端配置说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../../oss-lib/oss-lib-security/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../../oss-lib/oss-lib-security/USER_GUIDE_FOR_RESTFUL.md">
+            
+                <span>
+            
+                    
+                    RestFul应用接入lib-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.2" data-path="../../oss-lib/oss-lib-security/USER_GUIDE_FOR_TEMPLATE.md">
+            
+                <span>
+            
+                    
+                    Template应用接入lib-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.3" data-path="../../oss-lib/oss-lib-security/ABOUT_ME.md">
+            
+                <span>
+            
+                    
+                    关于lib-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../../oss-lib/oss-lib-test/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../../oss-lib/oss-lib-log4j2/README.md">
+            
+                <span>
+            
+                    
+                    oss-lib-log4j2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part IV</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../ENVIRONMENT.md">
+            
+                <span>
+            
+                    
+                    oss微服务运行时环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../oss-eureka/SERVICE_DISCOVERY.md">
+            
+                <span>
+            
+                    
+                    服务发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../DOCKER_INSTALL.md">
+            
+                <span>
+            
+                    
+                    如何安装docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../DOCKER_COMMANDS_AND_ISSUES.md">
+            
+                <span>
+            
+                    
+                    docker使用常见命令和常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../DOCKER_REGISTRY.md">
+            
+                <span>
+            
+                    
+                    在本地搭建docker的registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../oss-eureka/README.md">
+            
+                <span>
+            
+                    
+                    oss-eureka微服务发现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.5.1" data-path="../../oss-eureka/GRACEFUL_SHUTDOWN.md">
+            
+                <span>
+            
+                    
+                    如何优雅关闭服务/应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.2" data-path="../../oss-eureka/SELF_PRESERVATION.md">
+            
+                <span>
+            
+                    
+                    自我保护模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.3" data-path="../../oss-eureka/PERFORMANCE.md">
+            
+                <span>
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.4" data-path="../../oss-eureka/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss-eureka或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../oss-admin/README.md">
+            
+                <span>
+            
+                    
+                    oss-admin微服务监控管理中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.6.1" data-path="../../oss-admin/INTRODUCTION.md">
+            
+                <span>
+            
+                    
+                    oss-admin功能介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6.2" data-path="../../oss-admin/OSS_ADMIN_SOLUTIONS.md">
+            
+                <span>
+            
+                    
+                    oss-admin开发遇到的问题、解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6.3" data-path="../../oss-admin/OSS_ADMIN_SECURITY.md">
+            
+                <span>
+            
+                    
+                    oss-admin security说明文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6.4" data-path="../../oss-admin/OSS_ADMIN_ABOUT_CONFIG.md">
+            
+                <span>
+            
+                    
+                    oss-admin服务端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../oss-configserver/README.md">
+            
+                <span>
+            
+                    
+                    oss-configserver微服务配置中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../oss-configserver/INTRODUCTION_OF_YML.md">
+            
+                <span>
+            
+                    
+                    yml配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../oss-configserver/MANUAL_FOR_USER.md">
+            
+                <span>
+            
+                    
+                    用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.3" data-path="../../oss-configserver/MANUAL_FOR_ADMIN.md">
+            
+                <span>
+            
+                    
+                    管理员手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.4" data-path="../../oss-configserver/MANUAL_FOR_OPS.md">
+            
+                <span>
+            
+                    
+                    运维手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.5" data-path="../../oss-configserver/PERMISSIONS.md">
+            
+                <span>
+            
+                    
+                    安全机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.6" data-path="../../oss-configserver/PERFORMANCE.md">
+            
+                <span>
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.7" data-path="../../oss-configserver/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss-configserver或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../oss-configlint/README.md">
+            
+                <span>
+            
+                    
+                    oss-configlint配置文件检查工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../oss-keygen/README.md">
+            
+                <span>
+            
+                    
+                    oss-keygen配置密钥生成工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../LOCALNEXUS.md">
+            
+                <span>
+            
+                    
+                    在本地搭建nexus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../../MVNSITE.md">
+            
+                <span>
+            
+                    
+                    在本地搭建maven网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part V</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../oss-todomvc/">
+            
+                <a href="../../oss-todomvc/">
+            
+                    
+                    oss-todomvc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../oss-todomvc/oss-todomvc-sdk/">
+            
+                <a href="../../oss-todomvc/oss-todomvc-sdk/">
+            
+                    
+                    oss-todomvc-sdk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../oss-todomvc/oss-todomvc-security/">
+            
+                <a href="../../oss-todomvc/oss-todomvc-security/">
+            
+                    
+                    oss-todomvc-security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../oss-todomvc/oss-todomvc-jquery/">
+            
+                <a href="../../oss-todomvc/oss-todomvc-jquery/">
+            
+                    
+                    oss-todomvc-jquery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../oss-todomvc/oss-todomvc-react/">
+            
+                <a href="../../oss-todomvc/oss-todomvc-react/">
+            
+                    
+                    oss-todomvc-react
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../oss-todomvc/oss-todomvc-thymeleaf/">
+            
+                <a href="../../oss-todomvc/oss-todomvc-thymeleaf/">
+            
+                    
+                    oss-todomvc-thymeleaf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../oss-todomvc/CONTRIBUTION.md">
+            
+                <span>
+            
+                    
+                    如何构建oss-todomvc或贡献代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    oss-archetype项目骨架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="5.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    微服务项目骨架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../oss-archetype-micro-service-config/">
+            
+                <a href="../oss-archetype-micro-service-config/">
+            
+                    
+                    微服务配置repo骨架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part VI</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../oss-todomvc/oss-todomvc-app/FEIGN_TUTORIAL.html">
+            
+                <a href="../../oss-todomvc/oss-todomvc-app/FEIGN_TUTORIAL.html">
+            
+                    
+                    附录 feign和ribbon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../oss-todomvc/oss-todomvc-app/CONTRIBUTION.html">
+            
+                <a href="../../oss-todomvc/oss-todomvc-app/CONTRIBUTION.html">
+            
+                    
+                    https服务搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >微服务项目骨架</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="oss-archetype-micro-service">OSS-ARCHETYPE-MICRO-SERVICE</h1>
+<ul>
+<li><a href="#&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</a></li>
+<li><a href="#&#x9879;&#x76EE;&#x67B6;&#x6784;">&#x9879;&#x76EE;&#x67B6;&#x6784;</a><ul>
+<li><a href="#&#x76EE;&#x5F55;&#x7ED3;&#x6784;">&#x76EE;&#x5F55;&#x7ED3;&#x6784;</a><ul>
+<li><a href="#cish">ci.sh</a></li>
+<li><a href="#src">src</a></li>
+<li><a href="#service--client">service / client</a></li>
+</ul>
+</li>
+<li><a href="#&#x9879;&#x76EE;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;">&#x9879;&#x76EE;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;</a><ul>
+<li><a href="#&#x9879;&#x76EE;&#x6574;&#x4F53;&#x67B6;&#x6784;">&#x9879;&#x76EE;&#x6574;&#x4F53;&#x67B6;&#x6784;</a></li>
+<li><a href="#service-&#x6A21;&#x5757;">service &#x6A21;&#x5757;</a></li>
+<li><a href="#client-&#x6A21;&#x5757;">client &#x6A21;&#x5757;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#&#x6D4B;&#x8BD5;">&#x6D4B;&#x8BD5;</a><ul>
+<li><a href="#&#x6D4B;&#x8BD5;&#x6837;&#x4F8B;">&#x6D4B;&#x8BD5;&#x6837;&#x4F8B;</a></li>
+<li><a href="#&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x7684;&#x5206;&#x7C7B;">&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x7684;&#x5206;&#x7C7B;</a></li>
+<li><a href="#&#x5BF9;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x548C;&#x7AEF;&#x5230;&#x7AEF;&#x6D4B;&#x8BD5;&#x7684;&#x589E;&#x5F3A;">&#x5BF9;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x548C;&#x7AEF;&#x5230;&#x7AEF;&#x6D4B;&#x8BD5;&#x7684;&#x589E;&#x5F3A;</a></li>
+<li><a href="#&#x901A;&#x8FC7;pomxml&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x670D;&#x52A1;">&#x901A;&#x8FC7;pom.xml&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x670D;&#x52A1;</a><ul>
+<li><a href="#&#x5982;&#x4F55;&#x786E;&#x5B9A;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x542F;&#x52A8;">&#x5982;&#x4F55;&#x786E;&#x5B9A;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x542F;&#x52A8;&#xFF1F;</a></li>
+</ul>
+</li>
+<li><a href="#&#x5EFA;&#x8BAE;">&#x5EFA;&#x8BAE;</a></li>
+</ul>
+</li>
+<li><a href="#&#x6301;&#x7EED;&#x96C6;&#x6210;">&#x6301;&#x7EED;&#x96C6;&#x6210;</a><ul>
+<li><a href="#&#x9879;&#x76EE;-profiles-&#x8BBE;&#x7F6E;">&#x9879;&#x76EE; profiles &#x8BBE;&#x7F6E;</a></li>
+<li><a href="#cish&#x8BF4;&#x660E;">ci.sh&#x8BF4;&#x660E;</a></li>
+<li><a href="#&#x6211;&#x5382;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x5B9E;&#x8DF5;">&#x6211;&#x5382;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x5B9E;&#x8DF5;</a></li>
+</ul>
+</li>
+<li><a href="#&#x751F;&#x6210;&#x6587;&#x6863;&#x53CA;&#x9879;&#x76EE;&#x62A5;&#x544A;">&#x751F;&#x6210;&#x6587;&#x6863;&#x53CA;&#x9879;&#x76EE;&#x62A5;&#x544A;</a></li>
+<li><a href="#&#x6784;&#x5EFA;&#x53D1;&#x5E03;&#x548C;&#x90E8;&#x7F72;&#x65B9;&#x6848;">&#x6784;&#x5EFA;&#x3001;&#x53D1;&#x5E03;&#x548C;&#x90E8;&#x7F72;&#x65B9;&#x6848;</a><ul>
+<li><a href="#&#x672F;&#x8BED;&#x5B9A;&#x4E49;">&#x672F;&#x8BED;&#x5B9A;&#x4E49;</a></li>
+<li><a href="#&#x6784;&#x5EFA;docker&#x955C;&#x50CF;">&#x6784;&#x5EFA;Docker&#x955C;&#x50CF;&#x3002;</a></li>
+<li><a href="#&#x901A;&#x8FC7;ci&#x6267;&#x884C;&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;">&#x901A;&#x8FC7;ci&#x6267;&#x884C;&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x3002;</a></li>
+<li><a href="#&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x5206;&#x79BB;">&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x5206;&#x79BB;</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x672C;&#x9879;&#x76EE;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x7684;&#x9879;&#x76EE;&#xFF0C;C/S&#x67B6;&#x6784;&#x3002;&#x9879;&#x76EE;&#x4E2D;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<ul>
+<li>&#x57FA;&#x672C;&#x7684;oss dependency</li>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x53CA;&#x5176;client&#x9879;&#x76EE;&#x3002;</li>
+<li>&#x5BB9;&#x5668;&#x5316;&#x811A;&#x672C;</li>
+<li>&#x751F;&#x6210;&#x7684;&#x9879;&#x76EE;&#x5305;&#x542B;&#x90E8;&#x5206;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x6F14;&#x793A;oss&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x4EE5;&#x53CA;&#x6D4B;&#x8BD5;&#xFF08;&#x5305;&#x62EC;&#x5355;&#x6D4B;&#x3001;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#xFF09;&#x7684;demo&#x3002;</li>
+<li>&#x6574;&#x5957;&#x7684;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x89E3;&#x51B3;&#x65B9;&#x6848;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h2>
+<p>&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>mvn archetype:generate</code> &#x547D;&#x4EE4;&#xFF0C;&#x57FA;&#x4E8E;oss archetype&#x751F;&#x6210;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x7684;&#x9879;&#x76EE;&#x3002;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>    ARCHETYPE_VERSION=&quot;1.0.6.OSS-SNAPSHOT&quot;
+    #ARCHETYPE_REPOSITORY=&quot;${INTERNAL_NEXUS}/content/groups/public&quot;
+    ARCHETYPE_REPOSITORY=&quot;${LOCAL_NEXUS}/repository/maven-public&quot;
+
+    groupId=&quot;cn.home1&quot;
+    artifactId=&quot;micro&quot;
+    package=&quot;cn.home1&quot;
+    version=&quot;0.0.1-SNAPSHOT&quot;
+
+    mvn archetype:generate \
+        -DarchetypeGroupId=cn.home1 \
+        -DarchetypeArtifactId=oss-archetype-micro-service \
+        -DgroupId=${groupId} \
+        -DartifactId=${artifactId} \
+        -Dversion=${version} \
+        -Dpackage=${package} \
+        -DarchetypeVersion=${ARCHETYPE_VERSION} \
+        -DarchetypeRepository=${ARCHETYPE_REPOSITORY}
+</code></pre><p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0A;&#x547D;&#x4EE4;&#xFF0C;&#x751F;&#x6210; artifactId &#x4E3A; micro&#xFF0C;groupId &#x4E3A; cn.home1 &#x7684;&#x9879;&#x76EE;&#x3002;</p>
+<h2 id="&#x9879;&#x76EE;&#x67B6;&#x6784;">&#x9879;&#x76EE;&#x67B6;&#x6784;</h2>
+<h3 id="&#x76EE;&#x5F55;&#x7ED3;&#x6784;">&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h3>
+<p>&#x4EE5;&#x4E0A;&#x9762;&#x751F;&#x6210;&#x7684; micro &#x9879;&#x76EE;&#x4E3A;&#x4F8B;&#xFF0C;&#x76EE;&#x5F55;&#x7EC4;&#x7EC7;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<pre><code>    .
+    |--- ci.sh
+    |--- micro-client/
+    |--- micro-service/
+    |--- pom.xml
+    |--- README.md
+    `--- src
+</code></pre><p>&#x901A;&#x8FC7;oss-archetype-micro-service&#x751F;&#x6210;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x9AA8;&#x67B6;&#x9879;&#x76EE;&#x662F;&#x4E00;&#x4E2A;&#x591A;&#x6A21;&#x5757;&#x7684;&#x7236;&#x5B50;&#x9879;&#x76EE;&#xFF0C;&#x5404;&#x76EE;&#x5F55;&#x53CA;&#x6587;&#x4EF6;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#x3002;</p>
+<h4 id="cish">ci.sh</h4>
+<p>&#x6301;&#x7EED;&#x96C6;&#x6210;&#x7684;&#x5177;&#x4F53;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;gitlab-ci&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7C7B;&#x4F3C;travis&#x7684;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x670D;&#x52A1;&#x3002;</p>
+<h4 id="src">src</h4>
+<p><strong>&#x7236;&#x9879;&#x76EE;src&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;</strong></p>
+<pre><code>    .
+    &#x251C;&#x2500;&#x2500; main/
+    &#x2502;   &#x251C;&#x2500;&#x2500; checkstyle/
+    &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; google_checks_6.19.xml
+    &#x2502;   &#x251C;&#x2500;&#x2500; maven/
+    &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; settings-internal.xml
+    &#x2502;   &#x2514;&#x2500;&#x2500; pmd/
+    &#x2502;       &#x2514;&#x2500;&#x2500; pmd-ruleset-5.3.5.xml
+    &#x251C;&#x2500;&#x2500; readme/
+    &#x2514;&#x2500;&#x2500; site/
+        &#x251C;&#x2500;&#x2500; markdown
+        &#x2514;&#x2500;&#x2500; site.xml
+</code></pre><p><strong>&#x76EE;&#x5F55;&#x8BF4;&#x660E;</strong>  </p>
+<ul>
+<li>main&#x76EE;&#x5F55;<ul>
+<li>&#x5B58;&#x653E;maven&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;checkstyle&#x4EE5;&#x53CA;pmd&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x3002;</li>
+<li>TODO: &#x7528;&#x6237;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#xFF1F;</li>
+</ul>
+</li>
+<li>readme&#x76EE;&#x5F55;<ul>
+<li>&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;README.md&#x4E2D;&#x5F15;&#x7528;&#x7684;&#x56FE;&#x7247;&#x7B49;&#x9759;&#x6001;&#x6587;&#x4EF6;</li>
+</ul>
+</li>
+<li>site&#x76EE;&#x5F55;<ul>
+<li>&#x5B58;&#x653E;&#x9879;&#x76EE;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x7528;&#x4E8E;&#x751F;&#x6210;maven&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x4EE5;&#x53CA;gitbook&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h4 id="service--client">service / client</h4>
+<p>&#x8FD9;&#x56DB;&#x4E2A;&#x76EE;&#x5F55;&#x662F;&#x7236;&#x9879;&#x76EE;&#x7684;&#x4E24;&#x4E2A;&#x5B50;&#x9879;&#x76EE;&#xFF0C;&#x5404;&#x9879;&#x76EE;&#x7684;&#x7B80;&#x8981;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF1A; </p>
+<ul>
+<li>service(&#x672C;&#x6848;&#x4F8B;&#x4E2D;&#x4E3A; micro-service&#xFF0C;&#x4E0B;&#x540C;) &#x9879;&#x76EE;&#x4E3A;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x5177;&#x4F53;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5B9E;&#x73B0;&#x3002;</li>
+<li>client &#x9879;&#x76EE;&#x63D0;&#x4F9B; service &#x9879;&#x76EE;&#x7684; sdk&#xFF0C;&#x5BF9; service-test &#x7684;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x5FC5;&#x987B;&#x901A;&#x8FC7; client&#x3002;</li>
+</ul>
+<p><strong>&#x5B50;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;</strong>  </p>
+<p>&#x4EE5;service&#x9879;&#x76EE;&#x4E3A;&#x4F8B;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="src/readme/service-dir-file-architecture.png" alt="service&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7EC4;&#x7EC7;">  </p>
+<p><strong>&#x5B50;&#x9879;&#x76EE;src&#x76EE;&#x5F55;&#x8BF4;&#x660E;</strong> </p>
+<ul>
+<li>src<ul>
+<li>main <ul>
+<li>asciidoc <code>&#x65B0;&#x589E;&#x76EE;&#x5F55;&#x3002;&#x4E0E;Rest Docs&#x76F8;&#x5173;&#x7684;&#x76EE;&#x5F55;</code>  </li>
+<li>docker <code>&#x65B0;&#x589E;&#x76EE;&#x5F55;&#x3002;&#x9664;Dockerfile&#x4E4B;&#x5916;&#xFF0C;&#x5C06;jar&#x6253;&#x5305;&#x6210;docker&#x955C;&#x50CF;&#x9700;&#x8981;&#x7684;&#x7684;&#x811A;&#x672C;&#x3001;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x7B49;</code>  </li>
+<li>java <code>&#x4EE3;&#x7801;&#x6587;&#x4EF6;</code>  </li>
+<li>resources <code>&#x914D;&#x7F6E;&#x53CA;&#x8D44;&#x6E90;&#x6587;&#x4EF6;</code>  <ul>
+<li>docker  <code>Dockerfile&#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x542B;&#x73AF;&#x5883;&#x53D8;&#x91CF;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>readme <code>&#x5B58;&#x653E;&#x5B50;&#x9879;&#x76EE;README.md&#x5F15;&#x7528;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6;</code>  </li>
+<li>site <code>&#x5B58;&#x653E;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x9879;&#x76EE;maven site&#x9759;&#x6001;&#x9875;&#x9762;&#x7684;&#x7D22;&#x5F15;&#x53CA;markdown&#x6587;&#x4EF6;</code>  <ul>
+<li>site.xml <code>&#x4ECB;&#x7ECD;&#x548C;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x7167;[&#x8FD9;&#x7BC7;&#x6587;&#x6863;](TODO)</code>  </li>
+</ul>
+</li>
+<li>test <code>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x53CA;resource&#x76EE;&#x5F55;&#xFF0C;</code>  </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x5176;&#x4ED6;&#x9879;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#x7EC4;&#x7EC7;&#x65B9;&#x5F0F;&#x4E0E; service &#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;client &#x9879;&#x76EE;&#x4E2D;&#x6CA1;&#x6709; src/main/docker &#x76EE;&#x5F55;&#xFF0C;&#x56E0;&#x4E3A;&#x5BF9;&#x5B83;&#x4EEC;&#x7684;&#x8BBF;&#x95EE;&#x662F;&#x901A;&#x8FC7;&#x672C;&#x5730;&#x8C03;&#x7528;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x3002;</p>
+</blockquote>
+<h3 id="&#x9879;&#x76EE;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;">&#x9879;&#x76EE;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;</h3>
+<h4 id="&#x9879;&#x76EE;&#x6574;&#x4F53;&#x67B6;&#x6784;">&#x9879;&#x76EE;&#x6574;&#x4F53;&#x67B6;&#x6784;</h4>
+<p><img src="src/readme/micro-service-architecture.png" alt="&#x5FAE;&#x670D;&#x52A1;&#x9879;&#x76EE;&#x67B6;&#x6784;&#x56FE;"></p>
+<p>&#x4E0A;&#x56FE;&#x662F;&#x7B80;&#x5316;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x7684;RPC&#x6A21;&#x578B;&#x3002;</p>
+<ul>
+<li>&#x865A;&#x7EBF;&#x6807;&#x660E;&#x5404;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3002;</li>
+<li>client &lt;--&gt; service &#x4E4B;&#x95F4;&#x901A;&#x8FC7;&#x5FAE;&#x670D;&#x52A1;RPC&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x65B9;&#x4E3A;P&#xFF0C;&#x670D;&#x52A1;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x4E3A;C&#x3002;</li>
+<li>P&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x662F;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x7684;&#x6D88;&#x8D39;&#x8005;&#x6216;&#x8005;&#x63D0;&#x4F9B;&#x65B9;&#xFF0C;C&#x4E5F;&#x662F;&#x3002;</li>
+</ul>
+<p>&#x4E0A;&#x6587;&#x8BB2;&#x5230;&#x5FAE;&#x670D;&#x52A1;&#x4F53;&#x7CFB;&#x91CC;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x9879;&#x76EE;&#x4F1A;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x5B50;&#x9879;&#x76EE;&#x3002;&#x5982;&#x4E0B;&#x662F;&#x5404;&#x5B50;&#x9879;&#x76EE;&#x7684;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x3002;</p>
+<h4 id="service-&#x6A21;&#x5757;">service &#x6A21;&#x5757;</h4>
+<p>service &#x9879;&#x76EE;&#x662F;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF0C;&#x5B83;&#x5F80;&#x5F80;&#x7528;&#x4F5C;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x6216;&#x6D88;&#x8D39;&#x8005;&#x3002;</p>
+<blockquote>
+<p>&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x5728; eureka &#x4E0A;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#xFF0C;&#x65B9;&#x4FBF;&#x670D;&#x52A1;&#x6D88;&#x8D39;&#x65B9;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x627E;&#x5230;&#x5177;&#x4F53;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+</blockquote>
+<h4 id="client-&#x6A21;&#x5757;">client &#x6A21;&#x5757;</h4>
+<p>client &#x9879;&#x76EE;&#x4F5C;&#x4E3A; service &#x9879;&#x76EE;&#x7684; sdk&#xFF0C;&#x5FC5;&#x987B;&#x7531;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x65B9;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;, &#x4F9B;&#x670D;&#x52A1;&#x7684;&#x6D88;&#x8D39;&#x65B9;&#x5F15;&#x5165;&#x4EE5;&#x8FBE;&#x5230;&#x8BBF;&#x95EE; service &#x670D;&#x52A1;&#x7684;&#x76EE;&#x7684;&#x3002; </p>
+<p>&#x63A5;&#x5165;OSS&#x7684;RPC&#x6846;&#x67B6;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#xFF0C;&#x9700;&#x8981;&#x4E3A;&#x6D88;&#x8D39;&#x8005;&#x63D0;&#x4F9B;&#x5BA2;&#x6237;&#x7AEF;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x57FA;&#x672C;&#x5F00;&#x53D1;&#x601D;&#x8DEF;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x901A;&#x8FC7;feign&#x8C03;&#x7528;&#x540E;&#x7AEF;app&#x670D;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;hystrix&#x4EE5;&#x53CA;ribbon&#x6302;&#x5728;Feign&#x4E0A;&#xFF0C;&#x52A0;&#x5165;&#x7194;&#x65AD;&#x673A;&#x5236;&#x548C;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B56;&#x7565;&#xFF1B;</li>
+<li>&#x9879;&#x76EE;&#x63A5;&#x5165;<code>lib-security</code>&#x7684;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x4E8B;&#x60C5;&#xFF1A;<ul>
+<li>&#x670D;&#x52A1;&#x7684; provider &#x4E0E; consumer &#xFF0C;&#x751F;&#x6210; cookie &#x548C; token &#x7684; jwtKey &#x4EE5;&#x53CA; cookieKey &#x5FC5;&#x987B;&#x4E00;&#x81F4;&#xFF0C;&#x4E14;&#x5171;&#x7528;&#x4E00;&#x5957;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x4EE5;&#x53CA;&#x6743;&#x9650;&#x903B;&#x8F91;&#xFF1B;</li>
+<li>&#x4F1A;&#x81EA;&#x52A8;&#x8BFB;&#x53D6;&#x8BF7;&#x6C42; header &#x7684; token&#x3001;cookie &#x7B49;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF0C;&#x5411;&#x540E;&#x7AEF;&#x4F20;&#x9012;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5728;SDK&#x91CC;&#x4F5C;&#x989D;&#x5916;&#x5904;&#x7406;&#x3002;</li>
+<li>SDK &#x9879;&#x76EE;&#x5E94;&#x4FDD;&#x6301;&#x6700;&#x5C0F;&#x4F9D;&#x8D56;&#x96C6;&#x5408;&#x3002;<blockquote>
+<p>&#x5176;&#x4ED6;&#x7684; Java &#x9879;&#x76EE;&#x4E5F;&#x5E94;&#x8BE5;&#x5982;&#x6B64;&#xFF0C;&#x4E0D;&#x8981;&#x6709;&#x591A;&#x4F59;&#x7684;&#x4F9D;&#x8D56;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x6D4B;&#x8BD5;">&#x6D4B;&#x8BD5;</h2>
+<h3 id="&#x6D4B;&#x8BD5;&#x6837;&#x4F8B;">&#x6D4B;&#x8BD5;&#x6837;&#x4F8B;</h3>
+<p>&#x901A;&#x8FC7;oss&#x9879;&#x76EE;&#x9AA8;&#x67B6;&#x751F;&#x6210;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x7684;&#x670D;&#x52A1;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#x91CC;&#x6709;&#x5404;&#x79CD;&#x6D4B;&#x8BD5;&#x7684;&#x6837;&#x4F8B;&#x3002;
+&#x4EE5; service &#x9879;&#x76EE;&#x4E3A;&#x4F8B;&#x3002;src/test &#x76EE;&#x5F55;&#x4E0B;&#x6211;&#x4EEC;&#x653E;&#x7F6E;&#x4E86;&#x5982;&#x4E0B;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre><code>    .
+    &#x251C;&#x2500;&#x2500; GreetingControllerDocumentation.java
+    &#x251C;&#x2500;&#x2500; GreetingControllerMockMvcTests.java
+    &#x251C;&#x2500;&#x2500; GreetingJsonTests.java
+    &#x251C;&#x2500;&#x2500; GreetingRepositoryTests.java
+    &#x251C;&#x2500;&#x2500; IsolatedGreetingControllerMockMvcTests.java
+    &#x251C;&#x2500;&#x2500; ResourcesServiceMavenPluginIT.java
+    &#x251C;&#x2500;&#x2500; ResourcesServiceRestAssuredIT.java
+    &#x2514;&#x2500;&#x2500; ResourcesServiceRestTemplateIT.java
+</code></pre><ul>
+<li>GreetingControllerDocumentation&#x3002; &#x4F7F;&#x7528; Spring MVC Test&#xFF0C;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;case&#x81EA;&#x52A8;&#x751F;&#x6210;&#x6587;&#x6863;&#xFF0C;&#x6587;&#x6863;&#x4F7F;&#x7528;asciidoc&#x8FDB;&#x884C;&#x7F16;&#x5199;&#x3002;</li>
+<li>&#x4EE5;<code>Tests</code>&#x7ED3;&#x5C3E;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4EE3;&#x8868;&#x8BE5;&#x6D4B;&#x8BD5;&#x7C7B;&#x6267;&#x884C;&#x7684;&#x662F;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x3002;</li>
+<li>&#x4EE5;<code>IT</code>&#x7ED3;&#x5C3E;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4EE3;&#x8868;&#x8BE5;&#x6D4B;&#x8BD5;&#x7C7B;&#x6267;&#x884C;&#x7684;&#x662F;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x6D4B;&#x8BD5;&#x6837;&#x4F8B;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x7684;&#x5404;&#x4E2A;&#x6D4B;&#x8BD5;&#x6846;&#x67B6;&#xFF0C;&#x8BF7;&#x81EA;&#x884C;&#x67E5;&#x770B;&#x5B98;&#x7F51;&#x6587;&#x6863;&#x3002;  </p>
+</blockquote>
+<h3 id="&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x7684;&#x5206;&#x7C7B;">&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x7684;&#x5206;&#x7C7B;</h3>
+<p>&#x6211;&#x4EEC;&#x5728; maven &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6307;&#x5B9A;&#x5728; mvn test&#xFF08;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF09;&#x548C; mvn integration-test&#xFF08;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#xFF09;&#x8FC7;&#x7A0B;&#x6309;&#x7167;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x65B9;&#x5F0F;&#xFF0C;&#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p>&#x7B26;&#x5408;&#x4EE5;&#x4E0B;&#x6D4B;&#x8BD5;&#x7C7B;&#x547D;&#x540D;&#x89C4;&#x8303;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x5728; mvn test &#x9636;&#x6BB5;&#x6267;&#x884C;:</p>
+<ul>
+<li><em>*/</em>Documentation.java</li>
+<li><em>*/Test</em>.java</li>
+<li><em>*/</em>Test.java</li>
+<li><em>*/</em>TestCase.java</li>
+<li><em>*/</em>Tests.java</li>
+</ul>
+<p>&#x7B26;&#x5408;&#x4EE5;&#x4E0B;&#x6D4B;&#x8BD5;&#x7C7B;&#x547D;&#x540D;&#x89C4;&#x8303;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x5728; mvn integration-test &#x9636;&#x6BB5;&#x6267;&#x884C;:</p>
+<ul>
+<li><em>*/</em>IT.java</li>
+</ul>
+<h3 id="&#x5BF9;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x548C;&#x7AEF;&#x5230;&#x7AEF;&#x6D4B;&#x8BD5;&#x7684;&#x589E;&#x5F3A;">&#x5BF9;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x548C;&#x7AEF;&#x5230;&#x7AEF;&#x6D4B;&#x8BD5;&#x7684;&#x589E;&#x5F3A;</h3>
+<p>&#x4EE5;&#x5F80;&#x8FDB;&#x884C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x4F9D;&#x8D56;&#x7684;&#x6A21;&#x5757;/&#x670D;&#x52A1;&#xFF0C;&#x901A;&#x5E38;&#x4EE5;mock&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;&#x6A21;&#x62DF;&#x5F85;&#x6D4B;&#x8BD5;&#x7684;&#x903B;&#x8F91;&#xFF0C;mock&#x6570;&#x636E;&#x4E3B;&#x8981;&#x6709;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x201C;&#x6869;&#x201D;&#xFF0C;&#x4E0D;&#x533A;&#x5206;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x6C38;&#x8FDC;&#x8FD4;&#x56DE;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x8FD4;&#x56DE;&#x9884;&#x5148;&#x8BBE;&#x5B9A;&#x597D;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x7B80;&#x5355;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x201C;&#x6570;&#x636E;&#x6869;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#x3002; </p>
+</blockquote>
+<p>&#x5BF9;&#x4E8E;&#x7AEF;&#x5BF9;&#x7AEF;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x5F80;&#x5F80;&#x901A;&#x8FC7;ci&#x6216;&#x8005;&#x624B;&#x52A8;&#x90E8;&#x7F72;&#x5404;&#x4E2A;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x4EE5;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p><strong>&#x65B0;&#x7684;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x548C;&#x7AEF;&#x5230;&#x7AEF;&#x6D4B;&#x8BD5;&#x65B9;&#x6848;</strong></p>
+<p>&#x901A;&#x8FC7;&#x5BB9;&#x5668;&#x5316;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EA;&#x9700;&#x8981;&#x5728;pom.xml&#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;ci&#x6267;&#x884C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x4E4B;&#x524D;&#x542F;&#x52A8;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x3002;&#x9488;&#x5BF9;&#x5FAE;&#x670D;&#x52A1;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x6211;&#x4EEC;&#x505A;&#x4E86;&#x5982;&#x4E0B;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x9879;&#x76EE;&#x7684;&#x670D;&#x52A1;&#x4F9D;&#x8D56;&#x52A0;&#x5165;&#x9ED8;&#x8BA4;&#x7684;eureka&#x3001;configserver&#x3002;</li>
+<li>&#x52A0;&#x5165;&#x7B49;&#x5F85;&#x673A;&#x5236;&#xFF0C;&#x7B49;&#x5F85;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x8D77;&#x6765;&#x5E76;&#x4E14;rpc&#x7684;&#x670D;&#x52A1;&#x5728;eureka&#x4E2D;&#x6CE8;&#x518C;&#x5E76;&#x53D1;&#x73B0;&#x81EA;&#x8EAB;&#xFF1B;</li>
+<li>&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x4EE5;&#x968F;&#x673A;&#x7AEF;&#x53E3;&#x542F;&#x52A8;&#xFF0C;&#x9632;&#x6B62;&#x4E0E;&#x5176;&#x4ED6;&#x7684;&#x6D4B;&#x8BD5;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;maven docker&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5B9A;&#x4E49;&#x5728;<code>integration-test</code>&#x9636;&#x6BB5;&#x5177;&#x4F53;&#x542F;&#x52A8;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x7684; service &#x8FD8;&#x662F; service-test &#x955C;&#x50CF;&#x3002;</li>
+</ul>
+<h3 id="&#x901A;&#x8FC7;pomxml&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x670D;&#x52A1;">&#x901A;&#x8FC7;pom.xml&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x670D;&#x52A1;</h3>
+<ul>
+<li>&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x5728;&#x672C;&#x5730;&#x542F;&#x52A8; docker &#x7684;&#x5BB9;&#x5668;&#x3002;</li>
+<li><p>&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#xFF0C;&#x5728; images &#x5217;&#x8868;&#x91CC;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x7684;&#x914D;&#x7F6E;</p>
+<pre><code>  &lt;build&gt;
+      &lt;plugins&gt;
+          &lt;plugin&gt;
+              &lt;groupId&gt;io.fabric8&lt;/groupId&gt;
+              &lt;artifactId&gt;docker-maven-plugin&lt;/artifactId&gt;
+              &lt;configuration&gt;
+                  &lt;images&gt;
+                      &lt;!-- dependency image configuration here --&gt;
+                  &lt;/images&gt;
+              &lt;/configuration&gt;
+          &lt;/plugin&gt;
+      &lt;/plugins&gt;
+  &lt;/build&gt;
+</code></pre></li>
+<li><p>&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#xFF0C;&#x5E76;&#x4E14;&#x5728; eureka &#x6267;&#x884C;&#x4E86;&#x6CE8;&#x518C;&#x64CD;&#x4F5C;&#x3002;</p>
+</li>
+</ul>
+<h4 id="&#x5982;&#x4F55;&#x786E;&#x5B9A;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x542F;&#x52A8;&#xFF1F;">&#x5982;&#x4F55;&#x786E;&#x5B9A;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x542F;&#x52A8;&#xFF1F;</h4>
+<p>&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B; Restful &#x4FE1;&#x606F;&#x53CD;&#x9988;&#x63A5;&#x53E3;&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528;</strong>  </p>
+<ul>
+<li><p>&#x5728; pom.xml &#x4E2D;&#x5F15;&#x5165;&#x5982;&#x4E0B;&#x4F9D;&#x8D56;&#xFF1A; </p>
+<p>  TODO </p>
+</li>
+<li><p>&#x6309;&#x7167;&#x4E0A;&#x6587;&#x63CF;&#x8FF0;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x76F8;&#x5173; image &#x7684;&#x914D;&#x7F6E;&#x4E2D;&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A; </p>
+<pre><code>  &lt;image&gt;
+      &lt;!-- others --&gt;
+      &lt;wait&gt;
+          &lt;http&gt;
+              &lt;url&gt;http://${it.eureka.host}:${it.eureka.port}&lt;/url&gt;
+              &lt;method&gt;GET&lt;/method&gt;
+              &lt;status&gt;200&lt;/status&gt;
+          &lt;/http&gt;
+          &lt;time&gt;60000&lt;/time&gt;
+      &lt;/wait&gt;
+      &lt;!-- others --&gt;
+  &lt;/image&gt;
+</code></pre></li>
+</ul>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#xFF0C;&#x7B49;&#x5F85;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x624D;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x3002;</p>
+<h3 id="&#x5EFA;&#x8BAE;">&#x5EFA;&#x8BAE;</h3>
+<ul>
+<li>&#x6211;&#x4EEC;&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;&#x6267;&#x884C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x7684;&#x8FC7;&#x7A0B;&#x542F;&#x52A8;&#x8FC7;&#x591A;&#x7684;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#xFF0C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;dummy/fake/stub/mock&#x7B49;&#x65B9;&#x5F0F;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x670D;&#x52A1;&#x7684;&#x4F9D;&#x8D56;&#x4F17;&#x591A;&#xFF0C;&#x6D4B;&#x8BD5;&#x7B49;&#x5F85;&#x8FC7;&#x7A0B;&#x4F1A;&#x975E;&#x5E38;&#x6F2B;&#x957F;&#xFF0C;&#x5EFA;&#x8BAE;&#x53EA;&#x5728;&#x6267;&#x884C;&#x7AEF;&#x5BF9;&#x7AEF;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x91C7;&#x53D6;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</li>
+</ul>
+<h2 id="&#x6301;&#x7EED;&#x96C6;&#x6210;">&#x6301;&#x7EED;&#x96C6;&#x6210;</h2>
+<h3 id="&#x9879;&#x76EE;-profiles-&#x8BBE;&#x7F6E;">&#x9879;&#x76EE; profiles &#x8BBE;&#x7F6E;</h3>
+<p>&#x4E3A;&#x4E86;&#x533A;&#x5206;&#x5404;&#x4E2A;&#x73AF;&#x5883;&#x4EE5;&#x53CA;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C06; profile &#x9700;&#x8981;&#x5206;&#x4E3A;&#x4E00;&#x4E0B; 5 &#x79CD;&#xFF1A;</p>
+<ul>
+<li>development.env&#xFF0C;&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x672C;&#x673A;&#x5F00;&#x53D1;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;</li>
+<li>ut.env&#xFF0C;&#x7528;&#x4E8E;ci&#x6267;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</li>
+<li>it.env&#xFF0C;&#x7528;&#x4E8E;ci&#x6267;&#x884C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;</li>
+<li>staging.env&#xFF0C;&#x7528;&#x4E8E;QA&#x9A8C;&#x6536;&#xFF0C;&#x7EBF;&#x4E0B;&#x73AF;&#x5883;&#x90E8;&#x7F72;</li>
+<li>production.env&#xFF0C;&#x7528;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x90E8;&#x7F72;</li>
+</ul>
+<h3 id="cish&#x8BF4;&#x660E;">ci.sh&#x8BF4;&#x660E;</h3>
+<p>&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x9879;&#x76EE;&#x7684;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x811A;&#x672C;&#x653E;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x7684; ci.sh &#x6587;&#x4EF6;&#x91CC;&#x3002;&#x8BE5;&#x811A;&#x672C;&#x9ED8;&#x8BA4;&#x6709;&#x5982;&#x4E0B;&#x53C2;&#x6570;:</p>
+<ul>
+<li><p>test_and_build</p>
+<ul>
+<li>&#x6BCF;&#x6B21;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#x89E6;&#x53D1;&#xFF1B;</li>
+<li>&#x4F1A;&#x6267;&#x884C;mvn test&#x4EE5;&#x53CA;&#x9879;&#x76EE;&#x6784;&#x5EFA;&#x903B;&#x8F91;</li>
+<li>&#x5E38;&#x7528;&#x4E8E;&#x5728;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#x4E4B;&#x540E;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x548C;&#x6784;&#x5EFA;&#xFF0C;&#x6D4B;&#x8BD5;&#x5305;&#x62EC;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x548C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;</li>
+</ul>
+</li>
+<li><p>publish_snapshot</p>
+<ul>
+<li>develop &#x5206;&#x652F;&#x63D0;&#x4EA4;&#x89E6;&#x53D1;&#x3002;</li>
+<li>&#x4F1A;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;<ul>
+<li>&#x9879;&#x76EE; jar &#x5305;&#x53CA; Docker &#x955C;&#x50CF;&#x6784;&#x5EFA;</li>
+<li>jar &#x5305;&#x548C; Docker &#x955C;&#x50CF;&#x53D1;&#x5E03;</li>
+<li>&#x6839;&#x636E;&#x6587;&#x6863;&#x751F;&#x6210;&#x7684;&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x53D1;&#x5E03;&#x5230; develop &#x76EE;&#x5F55;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>publish_release</p>
+<ul>
+<li>master &#x5206;&#x652F;&#x63D0;&#x4EA4;&#x89E6;&#x53D1;&#x3002;</li>
+<li>&#x4F1A;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;<ul>
+<li>&#x9879;&#x76EE; jar &#x5305;&#x53CA; Docker &#x955C;&#x50CF;&#x6784;&#x5EFA;</li>
+<li>jar &#x5305;&#x548C; Docker &#x955C;&#x50CF;&#x53D1;&#x5E03;</li>
+<li>jar&#x5305;&#x548C;&#x6839;&#x636E;&#x6587;&#x6863;&#x751F;&#x6210;&#x7684;&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x53D1;&#x5E03;&#x5230;&#x751F;&#x4EA7;&#x73AF;&#x5883;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>publish_release_tag</p>
+<ul>
+<li>git tag&#x63D0;&#x4EA4;&#x89E6;&#x53D1;&#xFF0C;tag&#x540D;&#x5B57;&#x5FC5;&#x987B;&#x9075;&#x5FAA; ^release.+$ &#x89C4;&#x8303;&#xFF0C;&#x4F8B;&#x5982; <code>release-v1.0.0</code>&#x3002;</li>
+<li>&#x6682;&#x672A;&#x52A0;&#x5165;&#x64CD;&#x4F5C;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x6211;&#x5382;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x5B9E;&#x8DF5;">&#x6211;&#x5382;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x5B9E;&#x8DF5;</h3>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x7684;&#x903B;&#x8F91;&#x62BD;&#x79BB;&#x51FA;&#x6765;&#x653E;&#x5230; ci.sh &#x811A;&#x672C;&#x91CC;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x73AF;&#x5883;&#x91CC;&#x8C03;&#x7528; ci.sh &#x5B9E;&#x73B0;&#x9879;&#x76EE;&#x7684;&#x6301;&#x7EED;&#x6D4B;&#x8BD5;&#x3001;&#x6784;&#x5EFA;&#x3001;&#x53D1;&#x5E03;&#x7B49;&#x903B;&#x8F91;&#x3002;  </p>
+<p>&#x76EE;&#x524D;&#x6211;&#x4EEC;&#x7528;&#x5230;&#x7684; ci &#x5DE5;&#x5177;&#x662F; gitlab-ci&#x3002;&#x53EA;&#x9700;&#x8981;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x653E;&#x7F6E;&#x4E00;&#x4E2A; &quot;.gitlab-ci.yml&quot; &#x6587;&#x4EF6;&#xFF0C;&#x914D;&#x7F6E;&#x597D;gitlab&#x4E8B;&#x4EF6;&#x7684;&#x89E6;&#x53D1;&#x673A;&#x5236;&#x5373;&#x53EF;&#x3002;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x901A;&#x8FC7; oss &#x9AA8;&#x67B6;&#x751F;&#x6210;&#x9879;&#x76EE;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9ED8;&#x8BA4;&#x542F;&#x7528;&#x4E86; gitlab-ci&#xFF0C;&#x5E76;&#x52A0;&#x5165;&#x4E86;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;  </p>
+<ul>
+<li>&#x9488;&#x5BF9;&#x4EFB;&#x610F;&#x5206;&#x652F;&#x7684;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#xFF0C;&#x89E6;&#x53D1; on_every_push &#x64CD;&#x4F5C;, &#x6267;&#x884C; test_and_build &#x903B;&#x8F91;&#xFF1B;</li>
+<li>&#x9488;&#x5BF9; develop &#x5206;&#x652F;&#x7684;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#xFF0C;&#x89E6;&#x53D1; on_develop_push &#x64CD;&#x4F5C;&#xFF0C;&#x6267;&#x884C; publish_snapshot &#x903B;&#x8F91;&#x3002;</li>
+<li>&#x9488;&#x5BF9; master &#x5206;&#x652F;&#x7684;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#xFF0C;&#x89E6;&#x53D1; on_master_push &#x64CD;&#x4F5C;&#xFF0C;&#x6267;&#x884C; publish_release &#x903B;&#x8F91;&#x3002;  <ul>
+<li>&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x9879;&#x76EE;&#x5C4F;&#x853D;&#x6389; developer &#x5411; master &#x5206;&#x652F;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x6240;&#x6709;&#x5411; master &#x5206;&#x652F;&#x7684;&#x5408;&#x5E76;&#x64CD;&#x4F5C;&#x90FD;&#x901A;&#x8FC7;<strong>&#x7BA1;&#x7406;&#x5458;</strong>&#x5728; gitlab &#x7528;&#x6237;&#x4EA4;&#x4E92;&#x754C;&#x9762;&#x901A;&#x8FC7;&#x624B;&#x52A8;&#x70B9;&#x51FB; &#x201C;create pull request&#x201D;&#xFF0C;&#x53D1;&#x8D77;&#x4EE3;&#x7801;&#x5408;&#x5E76;&#x3002;</li>
+</ul>
+</li>
+<li>&#x9488;&#x5BF9; git tag &#xFF0C;&#x89E6;&#x53D1; on_release_tag &#x64CD;&#x4F5C;&#xFF0C;&#x6267;&#x884C; publish_release_tag&#x903B;&#x8F91;&#xFF0C;&#x76EE;&#x524D;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x4E0D;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x4EFB;&#x52A1;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x56E0;&#x4E3A; test_and_build &#x64CD;&#x4F5C;&#x662F;&#x9488;&#x5BF9;&#x4EFB;&#x610F;&#x5206;&#x652F;&#x7684;&#x4EE3;&#x7801;&#x53D8;&#x66F4;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#xFF0C;&#x6240;&#x4EE5;develop&#x3001;master&#x5206;&#x652F;&#x4EE5;&#x53CA;git&#x7684;tag&#x64CD;&#x4F5C;&#xFF0C;&#x90FD;&#x4F1A;&#x9996;&#x5148;&#x89E6;&#x53D1; test_and_build &#x64CD;&#x4F5C;&#x3002;<br>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x6C42;&#xFF0C;&#x4FEE;&#x6539; ci.sh &#x903B;&#x8F91;&#x4EE5;&#x53CA;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x7684;&#x5DE5;&#x5177;&#x548C;&#x6D41;&#x7A0B;&#x3002;<strong>&#x5728;&#x6CA1;&#x6709;&#x66F4;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x4E4B;&#x524D;&#xFF0C;&#x5EFA;&#x8BAE;&#x6309;&#x7167;&#x73B0;&#x6709;&#x7684;&#x6807;&#x51C6;&#x6765;&#x6267;&#x884C;</strong>&#x3002;  </p>
+</blockquote>
+<h2 id="&#x751F;&#x6210;&#x6587;&#x6863;&#x53CA;&#x9879;&#x76EE;&#x62A5;&#x544A;">&#x751F;&#x6210;&#x6587;&#x6863;&#x53CA;&#x9879;&#x76EE;&#x62A5;&#x544A;</h2>
+<p>ci&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x6784;&#x5EFA;&#x548C;&#x751F;&#x4EA7;&#x6784;&#x5EFA;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;&#x9879;&#x76EE;&#x751F;&#x6210;maven site&#x7F51;&#x7AD9;&#x5185;&#x5BB9;&#x5E76;&#x53D1;&#x5E03;&#x5230; mvn-site.internal &#x7F51;&#x7AD9;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x63A5;&#x5165; oss-build &#x7684;&#x9879;&#x76EE;&#x6784;&#x5EFA; maven site &#x4EE5;&#x53CA;&#x5177;&#x4F53;&#x751F;&#x6210;&#x7684;&#x7F51;&#x7AD9;&#x5185;&#x5BB9;&#xFF0C;&#x8BF7;&#x53C2;&#x7167;<a href="http://mvn-site.internal/oss-develop/gitbook/docs/oss/MVNSITE.html" target="_blank">&#x8FD9;&#x7BC7;&#x6587;&#x6863;</a>&#x3002;</p>
+<h2 id="&#x6784;&#x5EFA;&#x3001;&#x53D1;&#x5E03;&#x548C;&#x90E8;&#x7F72;&#x65B9;&#x6848;">&#x6784;&#x5EFA;&#x3001;&#x53D1;&#x5E03;&#x548C;&#x90E8;&#x7F72;&#x65B9;&#x6848;</h2>
+<h3 id="&#x672F;&#x8BED;&#x5B9A;&#x4E49;">&#x672F;&#x8BED;&#x5B9A;&#x4E49;</h3>
+<ul>
+<li>&#x6784;&#x5EFA;<ul>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x9879;&#x76EE;&#x7684;&#x6784;&#x5EFA;&#x5305;&#x62EC;&#x4E24;&#x65B9;&#x9762;&#xFF1A;<ul>
+<li>client &#x9879;&#x76EE;&#x9700;&#x8981;&#x6784;&#x5EFA; jar &#x5305;&#xFF0C;&#x65B9;&#x4FBF;&#x670D;&#x52A1;&#x7684;&#x6D88;&#x8D39;&#x65B9;&#x5F15;&#x5165;&#x4F9D;&#x8D56;&#x3002;</li>
+<li>service &#x9879;&#x76EE;&#x9700;&#x8981;&#x6784;&#x5EFA; docker &#x955C;&#x50CF;&#xFF0C;&#x65B9;&#x4FBF;&#x670D;&#x52A1;&#x7684;&#x90E8;&#x7F72;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x53D1;&#x5E03;<ul>
+<li>&#x53D1;&#x5E03;&#x64CD;&#x4F5C;&#x5305;&#x542B;&#x4E24;&#x90E8;&#x5206;&#x5185;&#x5BB9;<ul>
+<li>client &#x9879;&#x76EE;&#x7684; jar &#x5305;&#x9700;&#x8981;&#x53D1;&#x5E03;&#x5230; nexus &#x4ED3;&#x5E93;</li>
+<li>service &#x9879;&#x76EE;&#x9700;&#x8981;&#x6784;&#x5EFA; docker &#x955C;&#x50CF;&#xFF0C;&#x53D1;&#x5E03;&#x5230; docker-registry &#x4ED3;&#x5E93;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x90E8;&#x7F72;<ul>
+<li>&#x5C06;&#x53D1;&#x5E03;&#x5230;&#x516C;&#x53F8; docker-registry &#x4ED3;&#x5E93;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x90E8;&#x7F72;&#x5230;&#x6D4B;&#x8BD5;&#x6216;&#x8005;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x3002;</li>
+<li>&#x7BA1;&#x7406;&#x5458;&#x6216;&#x8005;&#x8FD0;&#x7EF4;&#x4EBA;&#x5458;&#xFF0C;&#x901A;&#x8FC7;&#x5728; jenkins &#x4E0A;&#x9F20;&#x6807;&#x70B9;&#x51FB;&#x6216;&#x8005;&#x5B9A;&#x65F6;&#x64CD;&#x4F5C;&#x89E6;&#x53D1;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x6784;&#x5EFA;docker&#x955C;&#x50CF;&#x3002;">&#x6784;&#x5EFA;Docker&#x955C;&#x50CF;&#x3002;</h3>
+<p>&#x901A;&#x8FC7; oss &#x9AA8;&#x67B6;&#x751F;&#x6210;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x5982;&#x4E0B;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li>&#x9879;&#x76EE;&#x7684; maven &#x914D;&#x7F6E;&#x4E2D;&#xFF0C;&#x5BF9; maven &#x7684;&#x63D2;&#x4EF6;&#x3001;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;&#x7B49;&#x8FDB;&#x884C;&#x4E86;&#x5B8C;&#x5584;&#x7684;&#x914D;&#x7F6E;&#xFF1B;</li>
+<li>&#x5728; service &#x9879;&#x76EE;&#x7684; src/main/resources/docker &#x4E2D;&#x52A0;&#x5165;&#x4E86; Dockerfile&#xFF0C;&#x7528;&#x4E8E;&#x6784;&#x5EFA; Docker &#x955C;&#x50CF;&#xFF1B;</li>
+<li>&#x901A;&#x8FC7; maven &#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x5C06;&#x9879;&#x76EE;&#x7684;&#x6784;&#x5EFA;&#x3001;&#x53D1;&#x5E03;&#x64CD;&#x4F5C;&#x4E0E;maven&#x751F;&#x547D;&#x5468;&#x671F;&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;&#x3002;<ul>
+<li><code>mvn clean</code>&#xFF0C;&#x6E05;&#x7406;&#x672C;&#x5730;&#x6784;&#x5EFA;&#x597D;&#x7684; jar &#x5305;&#x548C; docker &#x955C;&#x50CF;&#x3002;</li>
+<li><code>mvn package</code>&#xFF0C;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x4E0A;&#x6587;&#x4E2D;&#x7684;&#x201C;&#x6784;&#x5EFA;&#x201D;&#x903B;&#x8F91;&#x3002;</li>
+<li><code>mvn deploy</code>&#xFF0C;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#x9879;&#x76EE;&#x201C;&#x53D1;&#x5E03;&#x201D;&#x903B;&#x8F91;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x901A;&#x8FC7;ci&#x6267;&#x884C;&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x3002;">&#x901A;&#x8FC7;ci&#x6267;&#x884C;&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x3002;</h3>
+<ul>
+<li>&#x5728;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x5728;&#x5411;develop&#x548C;master&#x5206;&#x652F;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6267;&#x884C;docker&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x3002;</li>
+</ul>
+<h3 id="&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x5206;&#x79BB;">&#x6784;&#x5EFA;&#x4E0E;&#x53D1;&#x5E03;&#x5206;&#x79BB;</h3>
+<ul>
+<li>&#x53D1;&#x5E03;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x65F6;&#x95F4;&#x6267;&#x884C;&#x3002;&#x53D1;&#x5E03;&#x8FC7;&#x7A0B;&#x5931;&#x8D25;&#x4E0D;&#x4F1A;&#x6C61;&#x67D3;&#x751F;&#x4EA7;&#x7684;&#x73AF;&#x5883;&#x3002;</li>
+<li>&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;&#x8282;&#x7701;&#x4E86;&#x6784;&#x5EFA;&#x548C;&#x53D1;&#x5E03;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4E0A;&#x7EBF;&#x66F4;&#x52A0;&#x8FC5;&#x901F;&#x3002;</li>
+<li>&#x955C;&#x50CF;&#x53D1;&#x5E03;&#x5230; docker-registry&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x955C;&#x50CF;&#x7684;&#x591A;&#x4E2A;&#x7248;&#x672C;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x751F;&#x4EA7;&#x90E8;&#x7F72;&#x5931;&#x8D25;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE; docker-registry &#x91CC;&#x627E;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#xFF0C;&#x5FEB;&#x901F;&#x56DE;&#x6EDA;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: oss-archetype项目骨架">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../oss-archetype-micro-service-config/" class="navigation navigation-next " aria-label="Next page: 微服务配置repo骨架">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"微服务项目骨架","level":"5.2.1","depth":2,"next":{"title":"微服务配置repo骨架","level":"5.2.2","depth":2,"path":"docs/oss-archetype/oss-archetype-micro-service-config/README.md","ref":"docs/oss-archetype/oss-archetype-micro-service-config/README.md","articles":[]},"previous":{"title":"oss-archetype项目骨架","level":"5.2","depth":1,"path":"docs/oss-archetype/README.md","ref":"docs/oss-archetype/README.md","articles":[{"title":"微服务项目骨架","level":"5.2.1","depth":2,"path":"docs/oss-archetype/oss-archetype-micro-service/README.md","ref":"docs/oss-archetype/oss-archetype-micro-service/README.md","articles":[]},{"title":"微服务配置repo骨架","level":"5.2.2","depth":2,"path":"docs/oss-archetype/oss-archetype-micro-service-config/README.md","ref":"docs/oss-archetype/oss-archetype-micro-service-config/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"张浩伦 Haolun Zhang","pdf":{"pageNumbers":true,"fontSize":8,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":56,"left":56,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"home1开源技术栈","language":"zh-hans","gitbook":">= 1.0.1","direction":"ltr"},"file":{"path":"docs/oss-archetype/oss-archetype-micro-service/README.md","mtime":"2017-05-18T10:06:07.400Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-18T10:06:45.031Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

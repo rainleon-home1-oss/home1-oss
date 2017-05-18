@@ -1,0 +1,158 @@
+# common-config
+
+app:
+  error:
+    handlerEnabled: false # experimental
+    searchStrategy: HIERARCHY_FIRST
+  log:
+    flag: ${APP_LOG_FLAG:logTrace}
+  security:
+    cookieKey: 'AES256_CBC16:BpDSoeJkqinO93gkGe28UMRkhM5VKdM4OC0FZJC8LXM='
+    defaultTestUser: ${APP_SECURITY_DEFAULTTESTUSER:}
+    enabled: ${APP_SECURITY_ENABLED:true}
+    jwtKey: 'HS512:Ve+/vU5u77+977+977+977+977+9Acu/77+977+977+9OXrvv71XH++/vRLvv73vv73vv73vv71577+9fQLvv73vv71eB++/vW7vv71g77+977+977+9L++/vWDvv73vv73vv71577+9VO+/ve+/vR3vv73vv73Coemfv++/ve+/vQ=='
+    permited: ''
+    # --- form auth begin ---
+    authEntryPoint: restful
+    authFailureHandler: restful
+    authSucessHandler: restful
+    basePath: '/auth'
+    loginKey: 'RSA1024_PAIR_PKCS1_X509:MIICWwIBAAKBgQCdW4ZsHIRAE4v8oE5BZKeVD9hDeZnTBH/7qIlBcdbWDSWYBH9NnFjDet1tuXiAXhdQUPuwdtRMpvFKakjZoClWWvVWZE04zYbWG2I0lE1Q8qBZReIYowwzUKW+AlJhEyn1xou9QAC6jvD7G3kB1ihyJLhN8W2Ip2mlaAIrc97kLwIDAQABAoGAHA0r2mv++3lAlElzid7KrR0E/YpY7LA5rIAv77W+iawQTphGpWxAuqBVhvDwVVnwqAW3yI52bC+6hfyKfhk6JP3z0P0UhVPm5UZPO5Tpar+ecydLUKgtR2Jubg4q3yCGyOFSec/xgq27Mm5yN2Qt0owVPgQfM9XV4HWj2iv4ApkCQQDcfDwl4fvHuFYgLkvBOx/yInkUiReL6vEo/oBzsrX5wz4z3cVCKdfiTWHaeekLdTb8H0xvkfiP9pdQkZiKQ+6jAkEAtrQzcfH3qU94nUEPJU64ZYCkRMBoriwG44hKL/b1xGfkNKsjnAnLtIIc/2vI6cnwJ79qb8wYAxPReJ0JrjKJBQJARPKcpIQMhiIA3MNdcSmaDc/16RQNxvVLQLSFWqjR+y6w7us02kHXfq8QII/q7mhTL3hiIKmW/v3vx4QgHWys3QJAKdYjvaDZxFRlWyUNsc5P3TZS50dj8RY10Z5g1pDngD0F/aV+tvlrQv9UYoys6hQKwR9M4SLMENBV9BeJovEBfQJAOCZqiW/PHgFjnMzC5BgSoIkPeXusnZwr54w62zTt5BLsdzSs22dprfKJg3LnUlPISGKDerFtrqcMujcYcpbIMA==:MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCdW4ZsHIRAE4v8oE5BZKeVD9hDeZnTBH/7qIlBcdbWDSWYBH9NnFjDet1tuXiAXhdQUPuwdtRMpvFKakjZoClWWvVWZE04zYbWG2I0lE1Q8qBZReIYowwzUKW+AlJhEyn1xou9QAC6jvD7G3kB1ihyJLhN8W2Ip2mlaAIrc97kLwIDAQAB'
+    loginPublicKeyUrl: /login/rsaPublicKey
+    loginProcessingUrl: /login
+    logoutUrl: /logout
+    verifyCode: ${APP_SECURITY_VERIFYCODE:false}
+    # --- form auth end ---
+  type: ${APP_TYPE:MIXED}
+  adminPublicKey: 'RSA1024_PUB_X509:MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/gmBcdQZxiQmhQrP1awAZuuOl4snl7cEV8n65osVO7CdqxXG5mUYNVr6siwuTm/SsmBV+86JISlzvMK/Bxwsmf/ApZicgItChmDuU9TCaZIksqnpbtONnCm/sHWwa/2hqPTjdc0LC+jQ/FCU2b9vpbSId0Wg28/gtoGaLWbsm/QIDAQAB'
+
+hystrix:
+    shareSecurityContext: true
+    config.stream.maxConcurrentConnections: 20
+
+logging.level.: ${LOGGING_LEVEL_:INFO}
+logging:
+  file: ${LOGGING_FILE:${spring.application.name}}.log
+  path: ${LOGGING_PATH:${user.home}/data/${spring.application.name}/logs}
+  level:
+    jndi: ${LOGGING_LEVEL_:INFO}
+    com.zaxxer.hikari.pool: ${LOGGING_LEVEL_:INFO}
+    cn.home1.oss.lib.common.FileAndClasspathUtils$AssignableFilter: ${LOGGING_LEVEL_:INFO}
+    org.eclipse.jetty.jndi: ${LOGGING_LEVEL_:INFO}
+    org.eclipse.jetty.server.session: ${LOGGING_LEVEL_:INFO}
+    org.eclipse.jetty.util.DecoratedObjectFactory: ${LOGGING_LEVEL_:INFO}
+    org.springframework.beans.factory.annotation.InjectionMetadata: ${LOGGING_LEVEL_:INFO}
+    org.springframework.beans.factory.support.DefaultListableBeanFactory: ${LOGGING_LEVEL_:INFO}
+    org.springframework.core.env.MutablePropertySources: ${LOGGING_LEVEL_:INFO}
+    org.springframework.core.env.PropertySourcesPropertyResolver: ${LOGGING_LEVEL_:INFO}
+    org.springframework.jndi: ${LOGGING_LEVEL_:INFO}
+    org.springframework.core.type.classreading.AnnotationAttributesReadingVisitor: INFO
+    org.springframework.web.context.support.StandardServletEnvironment: ${LOGGING_LEVEL_:INFO}
+
+
+#        <!--Logger name="org.hibernate.validator" level="INFO" />
+#        <Logger name="org.springframework.beans" level="INFO" />
+#        <Logger name="org.springframework.beans.factory.support" level="INFO" />
+#        <Logger name="org.springframework.beans.factory.annotation" level="INFO" />
+#        <Logger name="org.springframework.boot.env" level="INFO" />
+#        <Logger name="org.springframework.context.annotation" level="INFO" />
+#        <Logger name="org.springframework.core.env" level="INFO" />
+#        <Logger name="org.springframework.core.io.support" level="INFO" />
+#        <Logger name="org.springframework.web.context.support" level="INFO" /-->
+
+# H2 Web Console (H2ConsoleProperties)
+spring.h2.console:
+  enabled: true
+  path: '/h2-console' # Path at which the console will be available.
+  web-allow-others: true
+
+spring:
+  rabbitmq:
+    host: ${SPRING_RABBITMQ_HOST:local-cloudbus}
+    port: ${SPRING_RABBITMQ_PORT:5672}
+    username: ${SPRING_RABBITMQ_USERNAME:user}
+    password: ${SPRING_RABBITMQ_PASSWORD:user_pass}
+
+greeting: greeting-none
+none: none
+override-result: none
+eureka:
+  instance:
+    hostname: ${EUREKA_INSTANCE_HOSTNAME:local-${spring.application.name}}
+    nonSecurePort: ${EUREKA_INSTANCE_NONSECUREPORT:8080}
+    prefer-ip-address: ${EUREKA_INSTANCE_PREFER_IP_ADDRESS:false}
+    instance-id: ${spring.application.name}:${EUREKA_INSTANCE_HOSTNAME:local-${spring.application.name}}:${EUREKA_INSTANCE_NONSECUREPORT:${SERVER_PORT:8080}}:${random.value}
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: ${server.context-path:${SERVER_CONTEXTPATH:}}${management.context-path:${MANAGEMENT_CONTEXTPATH:}}${endpoints.info.path:/info}
+    healthCheckUrlPath: ${server.context-path:${SERVER_CONTEXTPATH:}}${management.context-path:${MANAGEMENT_CONTEXTPATH:}}${endpoints.health.path:/health}
+    metadataMap:
+      management.context-path: ${server.context-path:${SERVER_CONTEXTPATH:}}${management.context-path:${MANAGEMENT_CONTEXTPATH:}}
+      management.port: ${management.port:${MANAGEMENT_PORT:${server.port:${SERVER_PORT:8080}}}}
+
+
+---
+spring:
+  profiles: default
+
+default: default
+override-result: default
+
+---
+spring:
+  profiles: development.env
+  resources.cache-period: 0
+  freemarker.cache: false
+  groovy.template.cache: false
+  mustache.cache: false
+  thymeleaf.cache: false
+  velocity.cache: false
+
+greeting: greeting-development.env
+secret: '{cipher}AQAcBZjNSNIT4dFJR0mzqzVOVY2OsKim3UQyei7TXZ+VCaBVHKEX2ztFwAMaZr7LABZYAkJG/3+tfnrQoA4NsQGH0YybIMui55cyQCbMtaItRlzy9uegnRwJ5w4XOqJVdglthpqNldeKt2dxXj/C1UnHijvNWjZ+BnDc7b9mTgt4pi7dLHfaLD3tuddvRDrYiaR4oNDFn7qkEz52Jk3ooYhomr+O5QH6VTqQcVqmOJF54XPiFCFoMho9m115BHaLvqL02g26hirFuDd2+JqFXo6mxFpRHZeOKeqUKQFdIDYQarmiLp21RL4lYpao2ePtA4CKqDOwntC4zXtKHmA8NOosxtxRUAZ1Sdp9CPjur5Ws/A7+uSUC6TwLqCRGxTLq8dY='
+
+env_development: development.env
+override-result: development.env
+
+---
+spring:
+  profiles: ut.env
+
+spring.datasource:
+  url: jdbc:h2:mem:${spring.application.name}
+
+env_ut: ut.env
+override-result: ut.env
+
+---
+spring:
+  profiles: it.env
+
+spring.datasource:
+  url: jdbc:h2:mem:${spring.application.name}
+
+env_it: it.env
+override-result: it.env
+
+---
+spring:
+  profiles: staging.env
+
+env_staging: staging.env
+override-result: staging.env
+
+---
+spring:
+  profiles: production.env
+  resources.cache-period: 86400
+  freemarker.cache: true
+  groovy.template.cache: true
+  mustache.cache: true
+  thymeleaf.cache: true
+  velocity.cache: true
+
+spring.h2.console:
+  enabled: false
+  web-allow-others: false
+
+env_production: production.env
+override-result: production.env

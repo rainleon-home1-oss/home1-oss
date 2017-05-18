@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.home1.oss.lib.log4j2.starter.Log4j2AutoConfiguration

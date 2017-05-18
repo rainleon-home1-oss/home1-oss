@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                        http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!-- see: http://central.sonatype.org/pages/ossrh-guide.html -->
+
+    <localRepository>${user.home}/.m2/repository</localRepository>
+    <interactiveMode/>
+    <usePluginRegistry/>
+    <offline/>
+
+    <proxies>
+    </proxies>
+
+    <mirrors>
+    </mirrors>
+
+    <servers>
+        <server>
+            <id>gpg.passphrase</id>
+            <passphrase>${env.GPG_PASSPHRASE}</passphrase>
+        </server>
+        <server>
+            <id>github-nexus-releases</id>
+            <username>${env.MAVEN_CENTRAL_USER}</username>
+            <password>${env.MAVEN_CENTRAL_PASS}</password>
+        </server>
+        <server>
+            <id>github-nexus-snapshots</id>
+            <username>${env.MAVEN_CENTRAL_USER}</username>
+            <password>${env.MAVEN_CENTRAL_PASS}</password>
+        </server>
+        <server>
+            <id>docker-hub</id>
+            <username>${env.DOCKERHUB_USER}</username>
+            <password>${env.DOCKERHUB_PASS}</password>
+            <configuration>
+                <email>${env.DOCKERHUB_MAIL}</email>
+            </configuration>
+        </server>
+    </servers>
+
+    <activeProfiles>
+        <activeProfile>github-infrastructure</activeProfile>
+    </activeProfiles>
+
+    <pluginGroups>
+        <pluginGroup>org.apache.maven.plugins</pluginGroup>
+        <pluginGroup>org.codehaus.mojo</pluginGroup>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.keyname>${env.GPG_KEYNAME}</gpg.keyname>
+                <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
+            </properties>
+        </profile>
+        <profile>
+            <id>github-infrastructure</id>
+            <properties>
+                <sonar.host.url>https://sonarqube.com</sonar.host.url>
+            </properties>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <name>Central Repository</name>
+                    <url>https://repo.maven.apache.org/maven2</url>
+                    <layout>default</layout>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>github-nexus-releases</id>
+                    <name>central releases</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>false</enabled></snapshots>
+                </repository>
+                <repository>
+                    <id>github-nexus-snapshots</id>
+                    <name>central snapshots</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <releases><enabled>false</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <name>Central Repository</name>
+                    <url>https://repo.maven.apache.org/maven2</url>
+                    <layout>default</layout>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>github-nexus-releases</id>
+                    <name>central releases</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>false</enabled></snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>github-nexus-snapshots</id>
+                    <name>central snapshots</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <releases><enabled>false</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>github-nexus-thirdparty</id>
+                    <name>central thirdparty</name>
+                    <url>https://oss.sonatype.org/content/repositories/third-party-releases/</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>false</enabled></snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>

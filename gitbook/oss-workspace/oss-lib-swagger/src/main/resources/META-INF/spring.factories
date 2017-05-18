@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.home1.oss.lib.swagger.starter.Swagger2DocumentationAutoConfiguration,\
+cn.home1.oss.lib.swagger.starter.AnnotationCheckListener

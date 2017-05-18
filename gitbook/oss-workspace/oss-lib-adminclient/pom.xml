@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cn.home1</groupId>
+        <artifactId>oss-build</artifactId>
+        <version>1.0.9.OSS</version>
+    </parent>
+
+    <artifactId>oss-lib-adminclient</artifactId>
+    <description>Spring boot admin client</description>
+    <name>oss-lib-adminclient</name>
+    <packaging>pom</packaging>
+    <url>https://github.com/home1-oss/oss-lib-adminclient</url>
+    <version>1.0.8.OSS-SNAPSHOT</version>
+
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/home1-oss/oss-lib-adminclient</url>
+    </ciManagement>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/home1-oss/oss-lib-adminclient/issues</url>
+    </issueManagement>
+    <scm>
+        <connection>scm:git:https://github.com/home1-oss/oss-lib-adminclient.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/home1-oss/oss-lib-adminclient.git</developerConnection>
+        <url>https://github.com/home1-oss/oss-lib-adminclient</url>
+    </scm>
+
+    <modules>
+        <module>oss-lib-adminclient-spring-boot-1.4.1.RELEASE</module>
+        <module>oss-lib-adminclient-spring-boot-1.4.2.RELEASE</module>
+    </modules>
+
+    <properties>
+        <oss-common-dependencies.version>1.0.8.OSS</oss-common-dependencies.version>
+    </properties>
+</project>

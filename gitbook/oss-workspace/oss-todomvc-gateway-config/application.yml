@@ -1,0 +1,77 @@
+# todomvc-gateway-config
+
+#logging.level.: ${LOGGING_LEVEL_:INFO}
+logging:
+  file: ${LOGGING_FILE:oss-todomvc-gateway}.log
+  level.: ${LOGGING_LEVEL_:INFO}
+  level:
+    jndi: ${LOGGING_LEVEL_:INFO}
+
+  path: ${LOGGING_PATH:${user.home}/data/oss-todomvc-gateway/logs}
+
+app:
+  type: RESTFUL
+
+
+
+
+
+
+
+
+
+
+security:
+
+  ignored: '/index.html,/css/**,/js/**,/images/**,/webjars/**,/**/favicon.ico'
+  user:
+    name: ${SECURITY_USER_NAME:admin}
+    password: ${SECURITY_USER_PASSWORD:admin_pass}
+    role: ADMIN
+
+server:
+  port: ${SERVER_PORT:8090}
+
+
+
+spring:
+  application:
+    name: oss-todomvc-gateway
+
+zuul:
+  ignored-services: ignored-services
+  routes:
+    todomvc:
+      path: /todomvc/** #想要映射的路径 ant风格 一个*只表示一个层级  两个*是多个层级
+      #url: http://xxx
+      service-id: oss-todomvc-app
+
+---
+spring:
+  profiles: default
+
+---
+spring:
+  profiles: development.env
+
+app:
+  security:
+    enabled: true
+    basePath: '/api'
+    defaultTestUser: user1
+
+---
+spring:
+  profiles: ut.env
+
+---
+spring:
+  profiles: it.env
+
+---
+spring:
+  profiles: staging.env
+
+---
+spring:
+  profiles: production.env

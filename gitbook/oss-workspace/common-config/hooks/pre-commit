@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# usage:
+# git version >= 2.9
+# git config --local core.hooksPath hooks
+
+echo "pre-commit"
+#java -jar hooks/oss-configlint.jar application.yml
+mvn clean package
+
