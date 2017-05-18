@@ -14,13 +14,15 @@ if [ -z "${GIT_REPO_OWNER}" ]; then
 fi
 ### OSS CI CONTEXT VARIABLES END
 
-export BUILD_PUBLISH_DEPLOY_SEGREGATION="true"
+export BUILD_PUBLISH_DEPLOY_SEGREGATION="false"
 export BUILD_SITE="true"
 export BUILD_SITE_PATH_PREFIX="oss"
-
-
+export BUILD_HOME1_OSS_OWNER="home1-oss"
+export BUILD_SITE_GITHUB_REPOSITORY_OWNER="${BUILD_HOME1_OSS_OWNER}"
+export BUILD_SITE_GITHUB_REPOSITORY_NAME="home1-oss"
 export BUILD_TEST_FAILURE_IGNORE="false"
 export BUILD_TEST_SKIP="false"
+export BUILD_PUBLISH_CHANNEL="snapshot"
 
 
 
@@ -29,39 +31,22 @@ echo "eval \$(curl -s -L ${GIT_SERVICE}/${GIT_REPO_OWNER}/oss-build/raw/${BUILD_
 eval "$(curl -s -L ${GIT_SERVICE}/${GIT_REPO_OWNER}/oss-build/raw/${BUILD_SCRIPT_REF}/src/main/ci-script/ci.sh)"
 ### OSS CI CALL REMOTE CI SCRIPT END
 
-if [ "${1}" != "test_and_build" ] && ([ "${GIT_REPO_OWNER}" != "home1-oss" ] || [ "pull_request" == "${TRAVIS_EVENT_TYPE}" ]); then
-    echo "skip deploy/publish on forked repo or which trigger by pull request "
-else
-    $@
-fi
+. src/gitbook/deploy.sh
 
-function get_git_domain() {
-  local git_service="${1}"
-  local git_host_port=$(echo ${git_service} | awk -F/ '{print $3}')
-  if [[ "${git_service}" == *local-git:* ]]; then
-    echo ${git_host_port} | sed -E 's#:[0-9]+$##'
-  else
-    echo ${git_host_port}
-  fi
-}
+# home1-oss && not pr trigger will on condition
+if ([ "${GIT_REPO_OWNER}" == "${BUILD_HOME1_OSS_OWNER}" ] && [ "pull_request" != "${TRAVIS_EVENT_TYPE}" ]); then
+    case "$CI_BUILD_REF_NAME" in
+        "develop")
+            export BUILD_PUBLISH_CHANNEL="snapshot";
+            $@;
+            ;;
+        "master")
+            export BUILD_PUBLISH_CHANNEL="release";
+            $@;
+            ;;
+        feature*|hotfix*|*)
+            echo "skip this action,as not on condition branch,CI_BUILD_REF_NAME=${CI_BUILD_REF_NAME}"
+            ;;
+    esac
+else $@; fi
 
-eval "$(curl -s -L ${GIT_SERVICE}/${GIT_REPO_OWNER}/oss-build/raw/${BUILD_SCRIPT_REF}/src/main/install/oss_repositories.sh)"
-if [ "test_and_build" == "${1}" ]; then
-  echo "build gitbook"
-  if [ ! -d src/gitbook/oss-workspace ]; then
-        mkdir -p src/gitbook/oss-workspace
-  fi
-  echo "GIT_SERVICE: ${GIT_SERVICE}"
-  source_git_domain="$(get_git_domain "${GIT_SERVICE}")"
-  (cd src/gitbook/oss-workspace; clone_oss_repositories "${source_git_domain}")
-  for repository in ${!OSS_REPOSITORIES_DICT[@]}; do
-    source_git_branch=""
-    if [ "release" == "${BUILD_PUBLISH_CHANNEL}" ]; then source_git_branch="master"; else source_git_branch="develop"; fi
-    echo "git checkout ${source_git_branch} of ${repository}"
-    (cd src/gitbook/oss-workspace/${repository}; git checkout ${source_git_branch} && git pull)
-  done
-  (cd src/gitbook; ./book.sh "build" "oss-workspace")
-else
-  echo "upload gitbook"
-  (cd src/gitbook; ./book.sh "deploy" "${INFRASTRUCTURE}")
-fi

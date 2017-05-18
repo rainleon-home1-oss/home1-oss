@@ -26,6 +26,8 @@ src/gitbook/*.pdf
 src/gitbook/*.epub
 src/gitbook/*.mobi
 src/gitbook/oss-workspace/
+src/gitbook/home1-oss-gitbook
+home1-oss-gitbook
 
 **/src/site/markdown/README.md
 **/src/site/markdown/src/readme
