@@ -57,4 +57,8 @@ deploy:
  local_dir: $OSS_GITBOOK_LOCAL_DIR
  repo: $OSS_GITBOOK_REPO_SLUG
  on:
-   branch: develop
+   branch: 
+   - develop
+   - master 
+   - release*
+
