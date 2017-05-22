@@ -9,6 +9,7 @@ OSS_REPOSITORIES_DICT["oss-github"]="/${GIT_REPO_OWNER}/oss-github"
 OSS_REPOSITORIES_DICT["oss-build"]="/${GIT_REPO_OWNER}/oss-build"
 OSS_REPOSITORIES_DICT["oss-common-dependencies"]="/${GIT_REPO_OWNER}/oss-common-dependencies"
 
+OSS_REPOSITORIES_DICT["oss-lib"]="/${GIT_REPO_OWNER}/oss-lib"
 OSS_REPOSITORIES_DICT["oss-lib-errorhandle"]="/${GIT_REPO_OWNER}/oss-lib-errorhandle"
 OSS_REPOSITORIES_DICT["oss-lib-security"]="/${GIT_REPO_OWNER}/oss-lib-security"
 OSS_REPOSITORIES_DICT["oss-lib-webmvc"]="/${GIT_REPO_OWNER}/oss-lib-webmvc"
@@ -24,9 +25,9 @@ OSS_REPOSITORIES_DICT["oss-configlint"]="/${GIT_REPO_OWNER}/oss-configlint"
 OSS_REPOSITORIES_DICT["oss-keygen"]="/${GIT_REPO_OWNER}/oss-keygen"
 
 # TODO add  develop branch for this repo
-#OSS_REPOSITORIES_DICT["oss-archetype"]="/${GIT_REPO_OWNER}/oss-archetype"
+OSS_REPOSITORIES_DICT["oss-archetype"]="/${GIT_REPO_OWNER}/oss-archetype"
+OSS_REPOSITORIES_DICT["oss-release"]="/${GIT_REPO_OWNER}/oss-release"
 #OSS_REPOSITORIES_DICT["common-config"]="/${GIT_REPO_OWNER}/common-config"
-#OSS_REPOSITORIES_DICT["oss-release"]="/${GIT_REPO_OWNER}/oss-release"
 #OSS_REPOSITORIES_DICT["maven-plugins"]="/${GIT_REPO_OWNER}/maven-plugins"
 
 
@@ -133,6 +134,6 @@ function before_deploy(){
   (rm -rf src/gitbook/$OSS_GITBOOK_LOCAL_DIR/.git)
   (rm -rf src/gitbook/$OSS_GITBOOK_LOCAL_DIR/$BUILD_PUBLISH_CHANNEL/*)
   (cp -R src/gitbook/_book/* src/gitbook/$OSS_GITBOOK_LOCAL_DIR/$BUILD_PUBLISH_CHANNEL/)
-  (rm -rf OSS_GITBOOK_LOCAL_DIR && mv src/gitbook/$OSS_GITBOOK_LOCAL_DIR $OSS_GITBOOK_LOCAL_DIR && ls -lh $OSS_GITBOOK_LOCAL_DIR/*)
+  (rm -rf $OSS_GITBOOK_LOCAL_DIR && mv src/gitbook/$OSS_GITBOOK_LOCAL_DIR $OSS_GITBOOK_LOCAL_DIR && ls -lh $OSS_GITBOOK_LOCAL_DIR/*)
   echo "prepare for deploy to gh-pages"
 }
