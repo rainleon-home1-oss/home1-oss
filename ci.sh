@@ -40,7 +40,7 @@ if ([ "${GIT_REPO_OWNER}" == "${BUILD_HOME1_OSS_OWNER}" ] && [ "pull_request" !=
             export BUILD_PUBLISH_CHANNEL="snapshot";
             $@;
             ;;
-        "master")
+        "master"|release*)
             export BUILD_PUBLISH_CHANNEL="release";
             $@;
             ;;

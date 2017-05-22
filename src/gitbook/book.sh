@@ -25,7 +25,7 @@ function copy_resources() {
     local base_path="${1}"
     local docs_path="${2}"
     local file_type="${3}"
-    files=(`(cd ${base_path}; find . -name "*.${file_type}" -print0 | xargs -0 ls | grep -E '^./(oss)-.+' | grep -v 'node_modules' | grep -v 'bower_components' | grep -v 'deprecated' | grep '/src/site/markdown/')`)
+    files=(`(cd ${base_path}; find . -name "*.${file_type}" -print0 | xargs -0 ls | grep -E '^./(oss)-.+|home1-oss' | grep -v 'node_modules' | grep -v 'bower_components' | grep -v 'deprecated' | grep '/src/site/markdown/')`)
     for file in "${files[@]}"; do
         file=${file:2}
         local directory="$(echo $(dirname ${file}) | sed 's#/src/site/markdown##g')"
