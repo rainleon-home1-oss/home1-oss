@@ -60,5 +60,4 @@ deploy:
    branch: 
    - develop
    - master 
-   - release*
 
