@@ -9,7 +9,7 @@
             * [spring-boot-1.4.1.RELEASE](docs/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/oss-common-dependencies-spring-boot-1.4.1.RELEASE/README.md)
             * [spring-boot-1.4.2.RELEASE](docs/oss-common-dependencies/oss-common-dependencies-spring-boot-1.4.x/oss-common-dependencies-spring-boot-1.4.2.RELEASE/README.md)
     * [oss的代码规范](docs/home1-oss/CODESTYLE.md)
-    * [oss的分支模型](docs/home1-oss/GITFLOW.md)
+    * [oss的分支模型](docs/home1-oss/GITFLOW_AND_PUBLISH.md)
     * [git fork开发文档](docs/home1-oss/GIT_FORK_TUTORIAL.md)
     * [各个开发者对项目的贡献](docs/home1-oss/GITINSPECT.md)
     * [如何使用oss为项目构建网站](docs/home1-oss/MVNSITE.md)
