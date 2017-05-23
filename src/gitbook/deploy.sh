@@ -24,23 +24,13 @@ OSS_REPOSITORIES_DICT["oss-configserver"]="/${GIT_REPO_OWNER}/oss-configserver"
 OSS_REPOSITORIES_DICT["oss-configlint"]="/${GIT_REPO_OWNER}/oss-configlint"
 OSS_REPOSITORIES_DICT["oss-keygen"]="/${GIT_REPO_OWNER}/oss-keygen"
 
-# TODO add  develop branch for this repo
 OSS_REPOSITORIES_DICT["oss-archetype"]="/${GIT_REPO_OWNER}/oss-archetype"
 OSS_REPOSITORIES_DICT["oss-release"]="/${GIT_REPO_OWNER}/oss-release"
-#OSS_REPOSITORIES_DICT["common-config"]="/${GIT_REPO_OWNER}/common-config"
-#OSS_REPOSITORIES_DICT["maven-plugins"]="/${GIT_REPO_OWNER}/maven-plugins"
-
 
 OSS_REPOSITORIES_DICT["oss-todomvc-app-config"]="/${GIT_REPO_OWNER}/oss-todomvc-app-config"
 OSS_REPOSITORIES_DICT["oss-todomvc"]="/${GIT_REPO_OWNER}/oss-todomvc"
 OSS_REPOSITORIES_DICT["oss-todomvc-gateway-config"]="/${GIT_REPO_OWNER}/oss-todomvc-gateway-config"
 OSS_REPOSITORIES_DICT["oss-todomvc-thymeleaf-config"]="/${GIT_REPO_OWNER}/oss-todomvc-thymeleaf-config"
-
-#OSS_REPOSITORIES_DICT["oss-jenkins-pipline"]="/${GIT_REPO_OWNER}/oss-jenkins-pipline"
-#OSS_REPOSITORIES_DICT["oss-jenkins-todomvc"]="/${GIT_REPO_OWNER}/oss-jenkins-todomvc"
-#OSS_REPOSITORIES_DICT["oss-environment"]="/${GIT_REPO_OWNER}/oss-environment"
-#OSS_REPOSITORIES_DICT["oss-eureka-sidecar"]="/${GIT_REPO_OWNER}/oss-eureka-sidecar"
-#OSS_REPOSITORIES_DICT["oss-samples"]="/${GIT_REPO_OWNER}/oss-samples"
 
 #echo "${!OSS_REPOSITORIES_DICT[@]}"
 #echo "${OSS_REPOSITORIES_DICT["key"]}"
@@ -122,18 +112,17 @@ function gitbook_build(){
 function before_deploy(){
   git_domain="$(get_git_domain "${GIT_SERVICE}")"
 
-  if [ -d "src/gitbook/${OSS_GITBOOK_LOCAL_DIR}" ]; then
-    rm -rf src/gitbook/${OSS_GITBOOK_LOCAL_DIR}
+  if [ -d "src/gitbook/${OSS_GITBOOK_GITHUB_PAGES_REPO}" ]; then
+    rm -rf src/gitbook/${OSS_GITBOOK_GITHUB_PAGES_REPO}
   fi
-  mkdir -p src/gitbook/${OSS_GITBOOK_LOCAL_DIR} ;
 
-  (cd src/gitbook/ && git clone https://$GITHUB_GIT_SERVICE_TOKEN:x-oauth-basic@${git_domain}/${OSS_GITBOOK_REPO_SLUG})
-  (cd src/gitbook/${OSS_GITBOOK_LOCAL_DIR} && git checkout gh-pages && git pull)
-  if [ ! -d "src/gitbook/${OSS_GITBOOK_LOCAL_DIR}/${BUILD_PUBLISH_CHANNEL}" ]; then mkdir -p src/gitbook/${OSS_GITBOOK_LOCAL_DIR}/${BUILD_PUBLISH_CHANNEL}; fi
+  (cd src/gitbook/ && git clone https://$GITHUB_GIT_SERVICE_TOKEN:x-oauth-basic@${git_domain}/${OSS_GITBOOK_GITHUB_PAGES_OWNER}/${OSS_GITBOOK_GITHUB_PAGES_REPO})
+  (cd src/gitbook/${OSS_GITBOOK_GITHUB_PAGES_REPO} && git checkout gh-pages && git pull)
+  if [ ! -d "src/gitbook/${OSS_GITBOOK_GITHUB_PAGES_REPO}/${BUILD_PUBLISH_CHANNEL}" ]; then mkdir -p src/gitbook/${OSS_GITBOOK_GITHUB_PAGES_REPO}/${BUILD_PUBLISH_CHANNEL}; fi
 
-  (rm -rf src/gitbook/$OSS_GITBOOK_LOCAL_DIR/.git)
-  (rm -rf src/gitbook/$OSS_GITBOOK_LOCAL_DIR/$BUILD_PUBLISH_CHANNEL/*)
-  (cp -R src/gitbook/_book/* src/gitbook/$OSS_GITBOOK_LOCAL_DIR/$BUILD_PUBLISH_CHANNEL/)
-  (rm -rf $OSS_GITBOOK_LOCAL_DIR && mv src/gitbook/$OSS_GITBOOK_LOCAL_DIR $OSS_GITBOOK_LOCAL_DIR && ls -lh $OSS_GITBOOK_LOCAL_DIR/*)
+  (rm -rf src/gitbook/$OSS_GITBOOK_GITHUB_PAGES_REPO/.git)
+  (rm -rf src/gitbook/$OSS_GITBOOK_GITHUB_PAGES_REPO/$BUILD_PUBLISH_CHANNEL/*)
+  (cp -R src/gitbook/_book/* src/gitbook/$OSS_GITBOOK_GITHUB_PAGES_REPO/$BUILD_PUBLISH_CHANNEL/)
+  (rm -rf $OSS_GITBOOK_GITHUB_PAGES_REPO && mv src/gitbook/$OSS_GITBOOK_GITHUB_PAGES_REPO $OSS_GITBOOK_GITHUB_PAGES_REPO && ls -lh $OSS_GITBOOK_GITHUB_PAGES_REPO/*)
   echo "prepare for deploy to gh-pages"
 }

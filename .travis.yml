@@ -35,8 +35,8 @@ env:
   - GIT_SERVICE=https://github.com
   - INFRASTRUCTURE=github
   - MAVEN_SKIP_RC=true
-  - OSS_GITBOOK_REPO_SLUG=home1-oss/home1-oss-gitbook
-  - OSS_GITBOOK_LOCAL_DIR=home1-oss-gitbook
+  - OSS_GITBOOK_GITHUB_PAGES_OWNER=home1-oss
+  - OSS_GITBOOK_GITHUB_PAGES_REPO=home1-oss-gitbook
 install: true
 jdk:
 - oraclejdk8
@@ -54,8 +54,8 @@ deploy:
  provider: pages
  skip_cleanup: true
  github_token: $GITHUB_GIT_SERVICE_TOKEN # Set in travis-ci.org dashboard
- local_dir: $OSS_GITBOOK_LOCAL_DIR
- repo: $OSS_GITBOOK_REPO_SLUG
+ local_dir: $OSS_GITBOOK_GITHUB_PAGES_REPO
+ repo: $OSS_GITBOOK_GITHUB_PAGES_OWNER/$OSS_GITBOOK_GITHUB_PAGES_REPO
  on:
    branch: 
    - develop
