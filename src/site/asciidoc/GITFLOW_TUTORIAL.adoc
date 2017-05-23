@@ -1,5 +1,4 @@
 = GIT FLOW 命令指南
-Author <zechengzhao@yirendai.com>
 v1.0, 2017-1-16
 :toc: right
 

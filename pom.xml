@@ -5,13 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.yirendai.infra</groupId>
+        <groupId>cn.home1</groupId>
         <artifactId>oss-build</artifactId>
-        <version>1.0.8.OSS-SNAPSHOT</version>
+        <version>1.0.9.OSS</version>
     </parent>
 
     <artifactId>oss-doc</artifactId>
+    <description>Site and document repository</description>
     <name>oss-doc</name>
     <packaging>pom</packaging>
-    <version>1.0.6.OSS-SNAPSHOT</version>
+    <url>https://github.com/home1-oss/home1-oss</url>
+    <version>1.0.6.OSS</version>
 </project>

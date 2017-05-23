@@ -32,7 +32,7 @@
     git config --local core.quotepath false
     git config --local core.safecrlf true
     git config --local user.name "someone"
-    git config --local user.email "someone@yirendai.com"
+    git config --local user.email "someone@home1.cn"
 
 或编辑.git/config  
 
@@ -44,7 +44,7 @@
         safecrlf = true
     [user]
         name = someone
-        email = someone@yirendai.com
+        email = someone@home1.cn
 
 ## 代码风格标准  
 [Java代码风格](https://google.github.io/styleguide/javaguide.html)  
@@ -114,7 +114,7 @@ EditorConfig 用来定义代码格式，以实现不同编辑器、不同项目�
 ![eclipse-checkstyle-plugin.png](images/eclipse-checkstyle-plugin.png)
 
 #### eclipse-pmd 插件
-源码分析器, 检查Java源文件中的潜在问题. 这个需要手工对每一个项目启用. 右键项目 -> properties -> pmd -> 启用. 然后在select rule set里面, 点击add -> file system, 找到yirendai-parent/src/main/pmd/pmd-ruleset.xml并启用. 启用以后, 就能在problems标签看到警告.
+源码分析器, 检查Java源文件中的潜在问题. 这个需要手工对每一个项目启用. 右键项目 -> properties -> pmd -> 启用. 然后在select rule set里面, 点击add -> file system, 找到oss-build/src/main/pmd/pmd-ruleset.xml并启用. 启用以后, 就能在problems标签看到警告.
 
 如果没反应, 先取消启用, 再重新启用一下就好.
 ![eclipse-pmd-plugin.png](images/eclipse-pmd-plugin.png)

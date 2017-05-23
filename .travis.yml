@@ -1,0 +1,64 @@
+addons:
+  apt:
+    packages:
+    - gnupg
+    - gnupg2
+    - graphviz
+    - openssl
+before_install:
+- wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip
+- unzip -qq apache-maven-3.3.9-bin.zip
+- export M2_HOME=$PWD/apache-maven-3.3.9
+- export PATH=$M2_HOME/bin:$PATH
+branches:
+  only:
+  - master
+  - develop
+  - /^feature\/.*$/
+  - /^hotfix\/.*$/
+  - /^release\/.*$/
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?/
+cache:
+  directories:
+  - "$HOME/.cache"
+  - "$HOME/.m2"
+  - "$HOME/.sonar/cache"
+
+env:
+  global:
+# if refer some release version please modify this var to oss-build version that has bean released, ex: v1.0.9.OSS
+# OSS_BUILD_CONFIG_REF_BRANCH refer to oss-github repo version
+#  - OSS_BUILD_REF_BRANCH=v1.0.9.OSS or release/1.0.9.OSS
+  - OSS_BUILD_REF_BRANCH=develop
+  - OSS_BUILD_CONFIG_REF_BRANCH=develop
+  - CI_BUILD_REF_NAME=$TRAVIS_BRANCH
+  - GIT_SERVICE=https://github.com
+  - INFRASTRUCTURE=github
+  - MAVEN_SKIP_RC=true
+  - OSS_GITBOOK_REPO_SLUG=home1-oss/home1-oss-gitbook
+  - OSS_GITBOOK_LOCAL_DIR=home1-oss-gitbook
+install: true
+jdk:
+- oraclejdk8
+language: java
+script:
+- bash ci.sh gitbook_build
+services:
+- docker
+sudo: required
+
+before_deploy:
+- bash ci.sh before_deploy
+
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github_token: $GITHUB_GIT_SERVICE_TOKEN # Set in travis-ci.org dashboard
+ local_dir: $OSS_GITBOOK_LOCAL_DIR
+ repo: $OSS_GITBOOK_REPO_SLUG
+ on:
+   branch: 
+   - develop
+   - master 
+   - release*
+
